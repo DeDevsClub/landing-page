@@ -10,11 +10,11 @@ import { SectionBackground } from "@/components/sections/section-backgrounds"
 export function TargetAudienceSection() {
   const audiences = [
     {
-      icon: <Code className="h-10 w-10 text-[#ff00ff]" />,
+      icon: <Code className="h-10 w-10 text-[#f143a9]" />,
       title: "Blockchain Developers",
       description:
         "Whether you're building on Ethereum, Solana, or other chains, connect with peers to solve complex problems and explore new protocols.",
-      glowColor: "from-[#ff00ff]/20 to-[#ff00ff]/5",
+      glowColor: "from-[#f143a9]/20 to-[#f143a9]/5",
     },
     {
       icon: <Brain className="h-10 w-10 text-[#00ffff]" />,
@@ -26,7 +26,7 @@ export function TargetAudienceSection() {
     {
       icon: (
         <svg
-          className="h-10 w-10 text-[#ff00ff]"
+          className="h-10 w-10 text-[#f143a9]"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ export function TargetAudienceSection() {
       title: "Product Managers",
       description:
         "Bridge the gap between technical innovation and market needs. Gain insights to build products at the intersection of blockchain and AI.",
-      glowColor: "from-[#ff00ff]/20 to-[#ff00ff]/5",
+      glowColor: "from-[#f143a9]/20 to-[#f143a9]/5",
     },
     {
       icon: (
@@ -83,7 +83,7 @@ export function TargetAudienceSection() {
           className="flex flex-col items-center justify-center space-y-4 text-center"
         >
           <div className="space-y-2">
-            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#ff00ff]/20 text-[#ff00ff] border border-[#ff00ff]/50">
+            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
               Who We Serve
             </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
@@ -117,9 +117,9 @@ export function TargetAudienceSection() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Button className="bg-gradient-to-r from-[#ff00ff] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+          <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
             <span className="relative z-10">Find Your Community</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
           </Button>
         </motion.div>
       </div>

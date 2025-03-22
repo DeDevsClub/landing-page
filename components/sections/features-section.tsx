@@ -9,11 +9,11 @@ import { SectionBackground } from "@/components/sections/section-backgrounds"
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Network className="h-10 w-10 text-[#ff00ff]" />,
+      icon: <Network className="h-10 w-10 text-[#f143a9]" />,
       title: "Networking Opportunities",
       description:
         "Connect with industry experts, innovators, and enthusiasts in blockchain and AI through virtual meetups, forums, and exclusive events.",
-      glowColor: "from-[#ff00ff]/20 to-[#ff00ff]/5",
+      glowColor: "from-[#f143a9]/20 to-[#f143a9]/5",
     },
     {
       icon: <BookOpen className="h-10 w-10 text-[#00ffff]" />,
@@ -23,11 +23,11 @@ export function FeaturesSection() {
       glowColor: "from-[#00ffff]/20 to-[#00ffff]/5",
     },
     {
-      icon: <Code className="h-10 w-10 text-[#ff00ff]" />,
+      icon: <Code className="h-10 w-10 text-[#f143a9]" />,
       title: "Collaborative Projects",
       description:
         "Join forces with fellow members on open-source projects, hackathons, and innovative solutions at the intersection of blockchain and AI.",
-      glowColor: "from-[#ff00ff]/20 to-[#ff00ff]/5",
+      glowColor: "from-[#f143a9]/20 to-[#f143a9]/5",
     },
     {
       icon: <Brain className="h-10 w-10 text-[#00ffff]" />,

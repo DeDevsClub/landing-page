@@ -6,12 +6,10 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check, BookOpen, Users, ArrowRight } from "lucide-react"
-import { useThemeDetector } from "@/hooks/use-theme-detector"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
 
 export function PricingSection() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
-  const { isDarkTheme } = useThemeDetector()
 
   const plans = [
     {
@@ -54,12 +52,12 @@ export function PricingSection() {
       ],
       cta: "Get Started",
       icon: <BookOpen className="h-5 w-5" />,
-      accentColor: "#ff00ff",
-      hoverColor: "from-[#ff00ff]/20 to-[#ff00ff]/5",
-      borderColor: "border-[#ff00ff]/30",
+      accentColor: "#f143a9",
+      hoverColor: "from-[#f143a9]/20 to-[#f143a9]/5",
+      borderColor: "border-[#f143a9]/30",
       buttonVariant: "default" as const,
       buttonClass:
-        "bg-gradient-to-r from-[#ff00ff] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group",
+        "bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group",
     },
   ]
 
@@ -77,7 +75,7 @@ export function PricingSection() {
           className="flex flex-col items-center justify-center space-y-4 text-center"
         >
           <div className="space-y-2">
-            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#ff00ff]/20 text-[#ff00ff] border border-[#ff00ff]/50">
+            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
               Pricing
             </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">Choose Your Path</h2>
@@ -104,13 +102,13 @@ export function PricingSection() {
               >
                 {plan.id === "premium" && (
                   <div className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 rotate-45">
-                    <Badge className="bg-gradient-to-r from-[#ff00ff] to-[#00ffff] text-white border-none px-8 py-1">
+                    <Badge className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] text-white border-none px-8 py-1">
                       Popular
                     </Badge>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#ff00ff]/5 to-[#00ffff]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff00ff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#f143a9]/5 to-[#00ffff]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f143a9] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ffff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <CardHeader>
@@ -162,7 +160,7 @@ export function PricingSection() {
                       )}
                     </span>
                     {plan.id === "premium" && (
-                      <span className="absolute inset-0 bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
                     )}
                   </Button>
                 </CardFooter>
@@ -195,7 +193,7 @@ export function PricingSection() {
             <p className="text-[#e0e0ff]/80">
               Contact us for enterprise pricing and custom solutions for teams of all sizes.
             </p>
-            <Button variant="outline" className="border-[#ff00ff] text-[#ff00ff] hover:bg-[#ff00ff]/10 mt-2">
+            <Button variant="outline" className="border-[#f143a9] text-[#f143a9] hover:bg-[#f143a9]/10 mt-2">
               Contact Sales
             </Button>
           </div>
@@ -204,4 +202,3 @@ export function PricingSection() {
     </section>
   )
 }
-

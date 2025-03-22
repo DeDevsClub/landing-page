@@ -20,7 +20,7 @@ export function InteractiveCard({
   title,
   description,
   className,
-  glowColor = "from-[#ff00ff]/20 to-[#00ffff]/20",
+  glowColor = "from-[#f143a9]/20 to-[#00ffff]/20",
   delay = 0,
 }: InteractiveCardProps) {
   const [isHovered, setIsHovered] = useState(false)

@@ -7,7 +7,7 @@ import { SectionBackground } from "@/components/sections/section-backgrounds"
 
 export function Footer() {
   return (
-    <footer className="w-full py-6 md:py-12 border-t border-[#ff00ff]/20 relative">
+    <footer className="w-full py-6 md:py-12 border-t border-[#f143a9]/20 relative">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="footer" />
 
@@ -16,10 +16,10 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
               <motion.div
-                className="h-8 w-8 rounded-full bg-gradient-to-r from-[#ff00ff] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
+                className="h-8 w-8 rounded-full bg-gradient-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-70 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
                 <span className="text-white font-bold relative z-10">D</span>
               </motion.div>
               <span className="text-xl font-bold text-white">DeDevs</span>
@@ -158,7 +158,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-[#ff00ff]/20 pt-8 flex flex-col sm:flex-row justify-between items-center">
+        <div className="mt-8 border-t border-[#f143a9]/20 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-xs text-[#e0e0ff]/50">© {new Date().getFullYear()} DeDevs. All rights reserved.</p>
           <p className="text-xs text-[#e0e0ff]/50 mt-4 sm:mt-0">Made with passion by the DeDevs team</p>
         </div>

@@ -6,12 +6,10 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
-import { useThemeDetector } from "@/hooks/use-theme-detector"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
 
 export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
-  const { isDarkTheme } = useThemeDetector()
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
@@ -37,7 +35,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#ff00ff]/20 text-[#ff00ff] border border-[#ff00ff]/50">
+                <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
                   Join Our Community
                 </Badge>
               </motion.div>
@@ -67,7 +65,7 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#ff00ff] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group"
+                className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -77,7 +75,7 @@ export function HeroSection() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </motion.span>
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
               </Button>
               <Button size="lg" variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
                 Explore Resources
@@ -96,7 +94,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, scale: 0.8, x: -10 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 1 + i * 0.1 }}
-                    className="h-8 w-8 rounded-full border-2 border-[#0b0014] bg-gradient-to-r from-[#ff00ff]/80 to-[#00ffff]/80 overflow-hidden"
+                    className="h-8 w-8 rounded-full border-2 border-[#0b0014] bg-gradient-to-r from-[#f143a9]/80 to-[#00ffff]/80 overflow-hidden"
                   >
                     <Image
                       src={`/placeholder.svg?height=32&width=32&text=${i}`}
@@ -119,9 +117,9 @@ export function HeroSection() {
             className="relative mx-auto aspect-video overflow-hidden rounded-xl lg:order-last"
             whileHover={{ scale: 1.03 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/20 to-[#00ffff]/20 z-10 mix-blend-overlay"></div>
-            <div className="absolute inset-0 border border-[#ff00ff]/30 rounded-xl z-20"></div>
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff00ff] to-transparent z-30"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f143a9]/20 to-[#00ffff]/20 z-10 mix-blend-overlay"></div>
+            <div className="absolute inset-0 border border-[#f143a9]/30 rounded-xl z-20"></div>
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f143a9] to-transparent z-30"></div>
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ffff] to-transparent z-30"></div>
 
             {/* Interactive elements */}
@@ -156,4 +154,3 @@ export function HeroSection() {
     </section>
   )
 }
-

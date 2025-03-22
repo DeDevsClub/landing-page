@@ -64,12 +64,12 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
   const renderSynthwaveSun = (position: "bottom" | "top" = "bottom", size = 200, opacity = 0.05) => {
     return (
       <div
-        className={`absolute ${position === "bottom" ? "-bottom-32" : "-top-32"} left-1/2 -translate-x-1/2 w-[${size}%] aspect-[2/1] bg-gradient-to-${position === "bottom" ? "t" : "b"} from-[#ff00ff] to-transparent opacity-${opacity * 100} rounded-[100%] z-0`}
+        className={`absolute ${position === "bottom" ? "-bottom-32" : "-top-32"} left-1/2 -translate-x-1/2 w-[${size}%] aspect-[2/1] bg-gradient-to-${position === "bottom" ? "t" : "b"} from-[#f143a9] to-transparent opacity-${opacity * 100} rounded-[100%] z-0`}
       ></div>
     )
   }
 
-  const renderGlowEffect = (color = "#ff00ff", position: "bottom" | "top" = "bottom", height = 64, opacity = 0.2) => {
+  const renderGlowEffect = (color = "#f143a9", position: "bottom" | "top" = "bottom", height = 64, opacity = 0.2) => {
     return (
       <div
         className={`absolute ${position} left-0 right-0 h-${height} bg-gradient-to-${position === "bottom" ? "t" : "b"} from-[${color}]/${opacity * 100} to-transparent z-0`}
@@ -83,11 +83,11 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
         className="absolute inset-0 z-0 opacity-10"
         animate={{
           background: [
-            "radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
-            "radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
-            "radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
-            "radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
-            "radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
+            "radial-gradient(circle at 20% 20%, rgba8, 71, 247, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
+            "radial-gradient(circle at 80% 80%, rgba8, 71, 247, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
+            "radial-gradient(circle at 20% 80%, rgba8, 71, 247, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
+            "radial-gradient(circle at 80% 20%, rgba8, 71, 247, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
+            "radial-gradient(circle at 20% 20%, rgba8, 71, 247, 0.3), rgba(0, 255, 255, 0.1), transparent 70%)",
           ],
         }}
         transition={{
@@ -99,7 +99,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
     )
   }
 
-  const renderFloatingParticles = (count = 15, colors: string[] = ["#ff00ff", "#00ffff"]) => {
+  const renderFloatingParticles = (count = 15, colors: string[] = ["#f143a9", "#00ffff"]) => {
     return (
       <div className="absolute inset-0 z-0">
         {colors.map((color) =>
@@ -143,8 +143,8 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
     return (
       <div className="absolute bottom-0 left-0 right-0 h-32 z-0 overflow-hidden opacity-20">
         <div className="absolute bottom-0 left-0 w-full h-32">
-          <div className="absolute bottom-0 left-0 w-1/3 h-24 bg-[#ff00ff] opacity-30 transform skew-x-12"></div>
-          <div className="absolute bottom-0 left-1/4 w-1/3 h-32 bg-[#ff00ff] opacity-20 transform -skew-x-12"></div>
+          <div className="absolute bottom-0 left-0 w-1/3 h-24 bg-[#f143a9] opacity-30 transform skew-x-12"></div>
+          <div className="absolute bottom-0 left-1/4 w-1/3 h-32 bg-[#f143a9] opacity-20 transform -skew-x-12"></div>
           <div className="absolute bottom-0 right-0 w-1/3 h-28 bg-[#00ffff] opacity-20 transform -skew-x-12"></div>
           <div className="absolute bottom-0 right-1/4 w-1/3 h-20 bg-[#00ffff] opacity-30 transform skew-x-12"></div>
         </div>
@@ -174,10 +174,10 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
         <>
           {baseBackground}
           {renderAnimatedGradient()}
-          {renderFloatingParticles(20, ["#ff00ff", "#00ffff"])}
+          {renderFloatingParticles(20, ["#f143a9", "#00ffff"])}
           {renderGridLines(0.1, 10, "both")}
-          {renderGlowEffect("#ff00ff", "bottom", 40, 0.1)}
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] via-[#ff00ff] z-0"></div>
+          {renderGlowEffect("#f143a9", "bottom", 40, 0.1)}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] via-[#f143a9] z-0"></div>
         </>
       )
 
@@ -213,7 +213,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {baseBackground}
           {renderStars(30)}
           {renderGridLines(0.1, 6, "vertical")}
-          {renderFloatingParticles(10, ["#ff00ff"])}
+          {renderFloatingParticles(10, ["#f143a9"])}
           {sectionBorders}
           <motion.div
             className="absolute inset-0 z-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"
@@ -248,7 +248,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {baseBackground}
           {renderCyberGrid(0.03)}
           {renderGridLines(0.1, 15, "horizontal")}
-          {renderFloatingParticles(8, ["#ff00ff", "#00ffff"])}
+          {renderFloatingParticles(8, ["#f143a9", "#00ffff"])}
           {sectionBorders}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] z-0"></div>
         </>
@@ -267,7 +267,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
             animate={{
               background: [
                 "radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.3), transparent 70%)",
-                "radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.3), transparent 70%)",
+                "radial-gradient(circle at 50% 50%, rgba8, 71, 247, 0.3), transparent 70%)",
                 "radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.3), transparent 70%)",
               ],
             }}
@@ -286,7 +286,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] z-0"></div>
           {renderSynthwaveSun("bottom", 200, 0.05)}
           {renderGridLines(0.2, 10, "horizontal")}
-          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#ff00ff]/20 to-transparent z-0"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#f143a9]/20 to-transparent z-0"></div>
         </>
       )
 
@@ -300,9 +300,9 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
             className="absolute inset-0 z-0 opacity-5"
             animate={{
               background: [
-                "radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.2), transparent 50%)",
+                "radial-gradient(circle at 20% 80%, rgba8, 71, 247, 0.2), transparent 50%)",
                 "radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.2), transparent 50%)",
-                "radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.2), transparent 50%)",
+                "radial-gradient(circle at 20% 80%, rgba8, 71, 247, 0.2), transparent 50%)",
               ],
             }}
             transition={{

@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "../theme-provider"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 
 const inter = Inter({ subsets: ["latin"] })
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,11 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
+        {children}
       </body>
     </html>
   )
 }
-
-
-

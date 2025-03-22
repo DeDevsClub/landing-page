@@ -172,7 +172,7 @@ export function RoadmapSection() {
         date: "January 2024",
         status: "in-progress",
         icon: <Rocket className="h-6 w-6" />,
-        color: "#ff00ff",
+        color: "#f143a9",
       },
       {
         id: "job-board",
@@ -181,7 +181,7 @@ export function RoadmapSection() {
         date: "February 2024",
         status: "in-progress",
         icon: <Users className="h-6 w-6" />,
-        color: "#ff00ff",
+        color: "#f143a9",
       },
       {
         id: "research-grants",
@@ -237,7 +237,7 @@ export function RoadmapSection() {
       case "completed":
         return <CheckCircle2 className="h-4 w-4 text-[#4CC38A]" />
       case "in-progress":
-        return <Clock className="h-4 w-4 text-[#ff00ff]" />
+        return <Clock className="h-4 w-4 text-[#f143a9]" />
       case "upcoming":
         return <Calendar className="h-4 w-4 text-[#00ffff]" />
       default:
@@ -263,7 +263,7 @@ export function RoadmapSection() {
       case "completed":
         return "bg-[#4CC38A]/20 text-[#4CC38A] border-[#4CC38A]/50"
       case "in-progress":
-        return "bg-[#ff00ff]/20 text-[#ff00ff] border-[#ff00ff]/50"
+        return "bg-[#f143a9]/20 text-[#f143a9] border-[#f143a9]/50"
       case "upcoming":
         return "bg-[#00ffff]/20 text-[#00ffff] border-[#00ffff]/50"
       default:
@@ -303,7 +303,7 @@ export function RoadmapSection() {
               size="icon"
               onClick={handlePrevious}
               disabled={activeQuarter === 0}
-              className="border-[#ff00ff] text-[#ff00ff] hover:bg-[#ff00ff]/10 disabled:opacity-50"
+              className="border-[#f143a9] text-[#f143a9] hover:bg-[#f143a9]/10 disabled:opacity-50"
             >
               <ChevronLeft className="h-4 w-4" />
               <span className="sr-only">Previous</span>
@@ -317,7 +317,7 @@ export function RoadmapSection() {
                     onClick={() => setActiveQuarter(index)}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 relative ${
                       activeQuarter === index
-                        ? "text-white bg-gradient-to-r from-[#ff00ff]/30 to-[#00ffff]/30"
+                        ? "text-white bg-gradient-to-r from-[#f143a9]/30 to-[#00ffff]/30"
                         : "text-[#e0e0ff]/70 hover:text-white"
                     }`}
                     whileHover={{ scale: 1.05 }}
@@ -326,7 +326,7 @@ export function RoadmapSection() {
                     {quarter.label}
                     {activeQuarter === index && (
                       <motion.div
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#ff00ff] to-[#00ffff]"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#f143a9] to-[#00ffff]"
                         layoutId="quarterIndicator"
                       />
                     )}
@@ -368,7 +368,7 @@ export function RoadmapSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
-                    <Card className="border-0 bg-[#0b0014]/50 backdrop-blur-sm border border-[#ff00ff]/20 hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full">
+                    <Card className="border-0 bg-[#0b0014]/50 backdrop-blur-sm border border-[#f143a9]/20 hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full">
                       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[item.color] to-transparent opacity-50"></div>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
@@ -390,14 +390,14 @@ export function RoadmapSection() {
                           </div>
                         </div>
 
-                        {/* Progress indicator */}
+                        {/* Progress Indicator */}
                         <div className="mt-4 h-1 w-full bg-[#e0e0ff]/10 rounded-full overflow-hidden">
                           <motion.div
                             className={`h-full rounded-full ${
                               item.status === "completed"
                                 ? "bg-[#4CC38A]"
                                 : item.status === "in-progress"
-                                  ? "bg-[#ff00ff]"
+                                  ? "bg-[#f143a9]"
                                   : "bg-[#00ffff]"
                             }`}
                             initial={{ width: "0%" }}
@@ -417,20 +417,20 @@ export function RoadmapSection() {
           </div>
 
           {/* View full roadmap button */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex justify-center mt-12"
           >
-            <Button className="bg-gradient-to-r from-[#ff00ff] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+            <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
               <span className="relative z-10 flex items-center">
-                View Full Roadmap <ExternalLink className="ml-2 h-4 w-4" />
+                View Roadmap <ExternalLink className="ml-2 h-4 w-4" />
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
             </Button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
