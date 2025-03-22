@@ -33,7 +33,7 @@ export function PricingSection() {
       hoverColor: "[#f143a9]/5",
       borderColor: "border-[#f143a9]/30",
       buttonVariant: "outline" as const,
-      buttonClass: "bg-gradient-from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group",
+      buttonClass: "bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50 hover:opacity-90 relative overflow-hidden group",
       link: "https://whop.com/dedevs",
     },
     {
