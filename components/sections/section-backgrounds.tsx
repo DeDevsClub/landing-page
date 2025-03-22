@@ -155,7 +155,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
   // Base background for all sections
   const baseBackground = (
     <div
-      className={`absolute inset-0 bg-gradient-to-b from-background via-accent to-background z-0 ${className}`}
+      className={`absolute inset-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] z-0 ${className}`}
     ></div>
   )
 
@@ -175,9 +175,9 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {baseBackground}
           {renderAnimatedGradient()}
           {renderFloatingParticles(20, ["#ff00ff", "#00ffff"])}
-          {renderGridLines(0.15, 10, "both")}
+          {renderGridLines(0.1, 10, "both")}
           {renderGlowEffect("#ff00ff", "bottom", 40, 0.1)}
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff00ff] to-transparent z-0"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] via-[#ff00ff] z-0"></div>
         </>
       )
 
@@ -216,14 +216,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {renderFloatingParticles(10, ["#ff00ff"])}
           {sectionBorders}
           <motion.div
-            className="absolute inset-0 z-0 opacity-5"
-            animate={{
-              background: [
-                "radial-gradient(circle at 70% 30%, rgba(255, 0, 255, 0.4), transparent 60%)",
-                "radial-gradient(circle at 30% 70%, rgba(255, 0, 255, 0.4), transparent 60%)",
-                "radial-gradient(circle at 70% 30%, rgba(255, 0, 255, 0.4), transparent 60%)",
-              ],
-            }}
+            className="absolute inset-0 z-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"
             transition={{
               duration: 15,
               repeat: Number.POSITIVE_INFINITY,
@@ -241,9 +234,8 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {renderSynthwaveSun("bottom", 200, 0.05)}
           {sectionBorders}
           <motion.div
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"
             style={{
-              background: "linear-gradient(180deg, transparent 0%, rgba(26, 11, 46, 0.3) 50%, transparent 100%)",
               opacity: isDarkTheme ? 0.6 : 0.2,
             }}
           />
@@ -258,7 +250,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {renderGridLines(0.1, 15, "horizontal")}
           {renderFloatingParticles(8, ["#ff00ff", "#00ffff"])}
           {sectionBorders}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/5 via-transparent to-[#00ffff]/5 z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014] z-0"></div>
         </>
       )
 
@@ -271,7 +263,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {renderStars(20)}
           {sectionBorders}
           <motion.div
-            className="absolute inset-0 z-0 opacity-10"
+            className="absolute inset-0 z-0 opacity-10 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"
             animate={{
               background: [
                 "radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.3), transparent 70%)",
@@ -301,9 +293,9 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
     case "footer":
       return (
         <>
-          <div className="absolute inset-0 bg-background z-0"></div>
+          <div className="absolute inset-0 bg-background z-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"></div>
           {renderGridLines(0.05, 5, "both")}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff00ff] to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"></div>
           <motion.div
             className="absolute inset-0 z-0 opacity-5"
             animate={{
