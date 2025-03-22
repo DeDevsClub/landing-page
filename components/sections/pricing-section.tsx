@@ -206,7 +206,7 @@ export function PricingSection() {
             <Link
               href="https://x.com/DeDevsClub"
               target="_blank"
-              className="text-[#e0e0ff] hover:text-[#e0e0ff]/80 w-full mx-auto py-8"
+              className="bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50 hover:text-[#e0e0ff]/80 w-full mx-auto py-8"
             >
               <Button variant="outline" className="border-[#f143a9] text-[#f143a9] hover:bg-[#f143a9]/10 mt-2 w-full">
                 <Twitter className="h-4 w-4" /> @DeDevsClub
