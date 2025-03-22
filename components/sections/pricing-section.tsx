@@ -5,8 +5,9 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Check, BookOpen, Users, ArrowRight } from "lucide-react"
+import { Check, BookOpen, Users, ArrowRight, Twitter } from "lucide-react"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import Link from "next/link"
 
 export function PricingSection() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
@@ -27,12 +28,13 @@ export function PricingSection() {
         "Monthly newsletter",
       ],
       cta: "Join for Free",
-      icon: <Users className="h-5 w-5" />,
-      accentColor: "#00ffff",
-      hoverColor: "from-[#00ffff]/20 to-[#00ffff]/5",
-      borderColor: "border-[#00ffff]/30",
+      icon: <Users className="h-8 w-8 rounded-full p-1 border-2 border-[#ffffff] bg-[#f143a9]" />,
+      accentColor: "#f143a9",
+      hoverColor: "[#f143a9]/5",
+      borderColor: "border-[#f143a9]/30",
       buttonVariant: "outline" as const,
-      buttonClass: "border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10",
+      buttonClass: "bg-gradient-from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group",
+      link: "https://whop.com/dedevs",
     },
     {
       id: "premium",
@@ -51,13 +53,14 @@ export function PricingSection() {
         "Job board priority access",
       ],
       cta: "Get Started",
-      icon: <BookOpen className="h-5 w-5" />,
+      icon: <BookOpen className="h-8 w-8 rounded-full p-1 border-2 border-[#ffffff] bg-[#f143a9]" />,
       accentColor: "#f143a9",
-      hoverColor: "from-[#f143a9]/20 to-[#f143a9]/5",
+      hoverColor: "[#f143a9]/5",
       borderColor: "border-[#f143a9]/30",
       buttonVariant: "default" as const,
       buttonClass:
-        "bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group",
+        "hover:bg-gradient-to-r from-[#f143a9] to-[#00ffff] bg-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group",
+      link: "https://whop.com/dedevs-academy",
     },
   ]
 
@@ -145,7 +148,13 @@ export function PricingSection() {
                   </ul>
                 </CardContent>
                 <CardFooter>
+                    <Link
+              href={plan.link}
+              target="_blank"
+              className="text-[#e0e0ff] hover:text-[#e0e0ff]/80"
+            >
                   <Button className={`w-full ${plan.buttonClass}`} variant={plan.buttonVariant} size="lg">
+                    {/* CTA Text */}
                     <span className="relative z-10 flex items-center">
                       {plan.cta}
                       {plan.id === "premium" && (
@@ -163,6 +172,7 @@ export function PricingSection() {
                       <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
                     )}
                   </Button>
+                    </Link>
                 </CardFooter>
               </Card>
 
@@ -186,16 +196,22 @@ export function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col items-center mt-16 text-center"
+          className="grid grid-cols-1 w-full space-y-4 items-center mt-16 text-center"
         >
-          <div className="max-w-[700px] space-y-4">
-            <h3 className="text-xl font-semibold text-white">Need a custom solution for your team?</h3>
-            <p className="text-[#e0e0ff]/80">
-              Contact us for enterprise pricing and custom solutions for teams of all sizes.
-            </p>
-            <Button variant="outline" className="border-[#f143a9] text-[#f143a9] hover:bg-[#f143a9]/10 mt-2">
-              Contact Sales
-            </Button>
+          <div className="grid grid-cols-1 w-full space-y-4">
+            {/* <h3 className="text-xl font-semibold text-white">Want to know more?</h3> */}
+            {/* <p className="text-[#e0e0ff]/80">
+              Follow us on social media to stay updated with the latest news and updates.
+            </p> */}
+            <Link
+              href="https://x.com/DeDevsClub"
+              target="_blank"
+              className="text-[#e0e0ff] hover:text-[#e0e0ff]/80 w-full mx-auto py-8"
+            >
+              <Button variant="outline" className="border-[#f143a9] text-[#f143a9] hover:bg-[#f143a9]/10 mt-2 w-full">
+                <Twitter className="h-4 w-4" /> @DeDevsClub
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -39,9 +39,9 @@ export function AboutSection() {
             </div>
 
             <Image
-              src="/placeholder.svg?height=550&width=550&text=About+DeDevs"
-              width={550}
-              height={550}
+              src="/banner.png"
+              width={2400}
+              height={1800}
               alt="About DeDevs"
               className="object-cover"
             />

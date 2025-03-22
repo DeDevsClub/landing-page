@@ -70,7 +70,7 @@ export function TargetAudienceSection() {
   ]
 
   return (
-    <section id="community" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section id="community" className="w-full py-8 px-12 md:py-18 lg:py-32 relative">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="audience" />
 
@@ -80,7 +80,7 @@ export function TargetAudienceSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center justify-center space-y-4 text-center"
+          className="flex flex-col items-center justify-center space-y-2 text-center"
         >
           <div className="space-y-2">
             <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
@@ -90,12 +90,12 @@ export function TargetAudienceSection() {
               Our Target Audience
             </h2>
             <p className="max-w-[900px] text-[#e0e0ff] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              DeDevs welcomes innovators from all backgrounds who are passionate about blockchain and AI technologies.
+              We welcome innovators who are passionate about blockchain and AI technologies.
             </p>
           </div>
         </motion.div>
-
-        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
+        {/* Audience Cards */}
+        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
           {audiences.map((audience, index) => (
             <InteractiveCard
               key={index}
@@ -107,8 +107,7 @@ export function TargetAudienceSection() {
             />
           ))}
         </div>
-
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -117,11 +116,11 @@ export function TargetAudienceSection() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+          <Button className="bg-[#f143a9] hover:bg-secondary text-white relative overflow-hidden group">
             <span className="relative z-10">Find Your Community</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+            <span className="absolute inset-0 bg-secondary hover:bg-[#f143a9] opacity-0 transition-opacity"></span>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

@@ -53,10 +53,10 @@ export function CtaSection() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"
           >
             {[
-              { count: "5,000+", label: "Community Members" },
-              { count: "50+", label: "Monthly Events" },
-              { count: "100+", label: "Collaborative Projects" },
-              { count: "30+", label: "Industry Partners" },
+              { count: "1,000+", label: "Community Members" },
+              { count: "2+", label: "Daily Updates" },
+              // { count: "1+", label: "Collaborative Projects" },
+              // { count: "30+", label: "Industry Partners" },
             ].map((stat, index) => (
               <motion.div
                 key={index}

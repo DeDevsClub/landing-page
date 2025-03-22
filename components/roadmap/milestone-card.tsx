@@ -43,7 +43,8 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
     <div className={`flex flex-col md:flex-row items-center ${isEven ? "md:flex-row-reverse" : ""}`}>
       {/* Date marker */}
       <motion.div
-        className="flex-shrink-0 w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 relative"
+    //   Date Marker
+        className="flex-shrink-0 w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 relative bg-[#0b0014]"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -93,7 +94,7 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
         variants={cardVariants}
       >
         <Card
-          className="synthwave-border overflow-hidden relative group cursor-pointer hover:shadow-lg transition-all duration-300"
+          className="synthwave-border overflow-hidden relative group cursor-pointer hover:shadow-lg transition-all duration-300 bg-[#0b0014]"
           onClick={onClick}
         >
           <div className="absolute top-0 left-0 w-1 h-full" style={{ backgroundColor: categoryDetails.color }}></div>
@@ -130,7 +131,7 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
             <h3 className="text-lg font-semibold mb-2">{milestone.title}</h3>
             <p className="text-muted-foreground text-sm mb-4">{milestone.description}</p>
 
-            <div className="flex justify-end">
+            <div className="flex justify-end bg-[#ffaee0] rounded-b-lg">
               <Button variant="ghost" size="sm" className="group-hover:translate-x-1 transition-transform duration-300">
                 View Details
                 <ChevronRight className="ml-1 h-4 w-4" />

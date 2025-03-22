@@ -45,7 +45,7 @@ export function HeroSection() {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white"
               >
-                Where Blockchain and AI Innovate Together
+                {`Innovate = Create`}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -97,7 +97,7 @@ export function HeroSection() {
                     className="h-8 w-8 rounded-full border-2 border-[#0b0014] bg-gradient-to-r from-[#f143a9]/80 to-[#00ffff]/80 overflow-hidden"
                   >
                     <Image
-                      src={`/placeholder.svg?height=32&width=32&text=${i}`}
+                      src={`/banner.png`}
                       width={32}
                       height={32}
                       alt={`Community member ${i}`}
@@ -142,9 +142,9 @@ export function HeroSection() {
             />
 
             <Image
-              src="/placeholder.svg?height=550&width=550&text=DeDevs"
-              width={550}
-              height={550}
+              src="/banner.png"
+              width={2400}
+              height={1800}
               alt="DeDevs Community"
               className="object-cover"
             />

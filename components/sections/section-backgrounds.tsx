@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useThemeDetector } from "@/hooks/use-theme-detector"
 
 interface SectionBackgroundProps {
   variant: "hero" | "features" | "audience" | "pricing" | "roadmap" | "about" | "cta" | "footer"
@@ -9,7 +8,6 @@ interface SectionBackgroundProps {
 }
 
 export function SectionBackground({ variant, className = "" }: SectionBackgroundProps) {
-  const { isDarkTheme } = useThemeDetector()
 
   // Common elements that will be composed differently for each variant
   const renderGridLines = (opacity = 0.2, count = 10, direction: "horizontal" | "vertical" | "both" = "both") => {
@@ -236,7 +234,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           <motion.div
             className="absolute inset-0 z-0 bg-gradient-to-r from-[#1a0b2e] to-[#0b0014]"
             style={{
-              opacity: isDarkTheme ? 0.6 : 0.2,
+              opacity: 0.6
             }}
           />
         </>

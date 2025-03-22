@@ -35,7 +35,7 @@ export function InteractiveCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Card className="border-0 bg-background/50 backdrop-blur-sm border border-primary/20 hover:border-secondary/40 transition-all duration-300 group overflow-hidden relative h-full">
+      <Card className="border-0 bg-[#000000]/40 backdrop-blur-sm border border-primary/20 hover:border-secondary/40 transition-all duration-300 group overflow-hidden relative h-full">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -50,10 +50,10 @@ export function InteractiveCard({
               transition={{ duration: 0.3 }}
             />
           </div>
-          <CardTitle className="text-xl text-foreground transition-all duration-300">{title}</CardTitle>
+          <CardTitle className="text-xl text-[#FFFFFF] transition-all duration-300">{title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-[#FFFFFF]">{description}</p>
 
           <motion.div
             className="w-full h-1 mt-4 bg-gradient-to-r from-primary/0 via-primary/50 to-secondary/0 rounded-full"

@@ -426,11 +426,11 @@ export function RoadmapSection() {
             <Link
               href="/roadmap"
             >
-              <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+              <Button className="bg-[#f143a9] hover:text-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group hover:border-[#f143a9]/ border-2 border-[#f143a9]/40">
                 <span className="relative z-10 flex items-center">
                   View Roadmap
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+                <span className="absolute inset-0 transition-opacity"></span>
               </Button>
             </Link>
           </motion.div>
