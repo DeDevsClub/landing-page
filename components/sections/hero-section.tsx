@@ -45,7 +45,7 @@ export function HeroSection() {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white"
               >
-                {`Innovate = Create`}
+                {`DeDevs Club`}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ export function HeroSection() {
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
               </Button>
-              <Button size="lg" variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
+              <Button size="lg" variant="outline" className="border-[#00ffff] bg-[#000000] text-[#00ffff] hover:bg-[#00ffff]/10">
                 Explore Resources
               </Button>
             </motion.div>
