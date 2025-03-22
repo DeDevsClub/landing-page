@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Link from "next/link"
 import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
@@ -15,7 +15,6 @@ import {
   Clock,
   ChevronRight,
   ChevronLeft,
-  ExternalLink,
   Brain,
   Code,
   Network,
@@ -290,7 +289,7 @@ export function RoadmapSection() {
             </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">DeDevs Roadmap</h2>
             <p className="max-w-[900px] text-[#e0e0ff] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Follow our journey and see what's coming next for the DeDevs community.
+              {`Follow our journey and see what\'s coming next for the DeDevs community.`}
             </p>
           </div>
         </motion.div>
@@ -417,20 +416,24 @@ export function RoadmapSection() {
           </div>
 
           {/* View full roadmap button */}
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex justify-center mt-12"
           >
-            <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
-              <span className="relative z-10 flex items-center">
-                View Roadmap <ExternalLink className="ml-2 h-4 w-4" />
-              </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
-            </Button>
-          </motion.div> */}
+            <Link
+              href="/roadmap"
+            >
+              <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+                <span className="relative z-10 flex items-center">
+                  View Roadmap
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
