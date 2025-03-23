@@ -10,7 +10,7 @@ import {
   type MilestoneStatus,
   getCategoryDetails,
   getStatusDetails,
-} from "@/data/roadmap-data"
+} from "@/constants/roadmap-data"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"

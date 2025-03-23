@@ -367,7 +367,7 @@ export function RoadmapSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
-                    <Card className="border-0 bg-[#0b0014]/50 backdrop-blur-sm border border-[#f143a9]/20 hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full">
+                    <Card className="border-0 bg-[#0B101C]/50 backdrop-blur-sm border border-[#f143a9]/20 hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full">
                       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[item.color] to-transparent opacity-50"></div>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">

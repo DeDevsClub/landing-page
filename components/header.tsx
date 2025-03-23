@@ -5,12 +5,14 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
+import { URLs } from "@/constants/urls"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#f143a9]/20 bg-[#0b0014]/80 backdrop-blur supports-[backdrop-filter]:bg-[#0b0014]/80">
+    <header className="sticky top-0 z-50 w-full border-b border-[#f143a9]/20 bg-[#0B101C] backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
@@ -20,7 +22,14 @@ export function Header() {
               whileTap={{ scale: 0.9 }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
-              <span className="text-white font-bold relative z-10">D</span>
+              <span className="text-white font-bold relative z-10">
+                <Image
+                  src="/favicon.ico"
+                  width={32}
+                  height={32}
+                  alt="DeDevs Logo"
+                />
+              </span>
             </motion.div>
             <span className="text-xl font-bold text-white">DeDevs</span>
           </Link>
@@ -41,7 +50,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-[#0b0014] border-b border-[#f143a9]/20 p-4 md:hidden">
+          <div className="absolute top-16 left-0 right-0 bg-[#0B101C] border-b border-[#f143a9]/20 p-4 md:hidden">
             <nav className="flex flex-col space-y-4">
               <Link
                 href="#about"
@@ -118,10 +127,15 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link href="#" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            Sign In
-          </Link>
-          <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white">Join Now</Button>
+          <Button 
+            variant="filledPink"
+            link={{ 
+              href: URLs.main,
+              external: true
+             }}
+          >
+            Join Now
+          </Button>
         </div>
       </div>
     </header>

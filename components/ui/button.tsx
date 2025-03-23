@@ -9,6 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        outlineBlue: "bg-[#000000] hover:text-[#000000] hover:bg-[#00ffff]/60 border-[#00ffff] text-[#00ffff] relative overflow-hidden group border",
+        filledBlue: "bg-[#00ffff] hover:text-[#00ffff] hover:bg-[#000000]/60 border-[#00ffff] text-[#000000] relative overflow-hidden group border",
+        outlinePink: "bg-[#000000] hover:text-[#000000] hover:bg-[#F143A9]/60 border-[#F143A9] text-[#F143A9] relative overflow-hidden group border",
+        filledPink: "bg-[#F143A9] hover:text-[#F143A9] hover:bg-[#000000]/60 border-[#F143A9] text-[#FFFFFF] relative overflow-hidden group border",
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
@@ -37,16 +41,30 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  link?: {
+    href: string
+    external?: boolean
+  }
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, link, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
+        {...(link && {
+          onClick: (e) => {
+            e.preventDefault()
+            if (link.external) {
+              window.open(link.href, "_blank")
+            } else {
+              window.location.href = link.href
+            }
+          },
+        })}
       />
     )
   }

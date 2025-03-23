@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { format } from "date-fns"
-import { type Milestone, getCategoryDetails, getStatusDetails } from "../../data/roadmap-data"
+import { type Milestone, getCategoryDetails, getStatusDetails } from "../../constants/roadmap-data"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -44,7 +44,7 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
       {/* Date marker */}
       <motion.div
     //   Date Marker
-        className="flex-shrink-0 w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 relative bg-[#0b0014]"
+        className="flex-shrink-0 w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 relative bg-[#0B101C]"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -94,7 +94,7 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
         variants={cardVariants}
       >
         <Card
-          className="synthwave-border overflow-hidden relative group cursor-pointer hover:shadow-lg transition-all duration-300 bg-[#0b0014]"
+          className="synthwave-border overflow-hidden relative group cursor-pointer hover:shadow-lg transition-all duration-300 bg-[#0B101C]"
           onClick={onClick}
         >
           <div className="absolute top-0 left-0 w-1 h-full" style={{ backgroundColor: categoryDetails.color }}></div>

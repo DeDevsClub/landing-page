@@ -5,17 +5,37 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Twitter } from "lucide-react"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+// import Link from "next/link"
 
 export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
-
+  const users = [{
+    key: 1,
+    src: "https://pbs.twimg.com/profile_images/1863535589145915392/6OUF5yp2_400x400.jpg",
+    alt: "@0xbuns"
+  },
+  {
+    key: 2,
+    src: "https://pbs.twimg.com/profile_images/1660702029541457943/egKTfIgY_400x400.jpg",
+    alt: "@santygegen"
+  },
+  {
+    key: 3,
+    src: "https://pbs.twimg.com/profile_images/1888739662853984256/pDBZ8ZoI_400x400.jpg",
+    alt: "@brookejlacey"
+  },
+  {
+    key: 4,
+    src: "https://pbs.twimg.com/profile_images/1878951982007767040/6WZKHzlx_400x400.jpg",
+    alt: "@KuphDev"
+  }
+  ]
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
+    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden bg-[#0B101C]">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="hero" />
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -35,8 +55,10 @@ export function HeroSection() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
-                  Join Our Community
+                <Badge
+                  link={{ href: "https://x.com/DeDevsClub", external: true }}
+                  className="flex-inline rounded-md px-3 py-1 gap-2 text-sm bg-[#000000] justify-between text-[#FFFFFF] hover:text-[#F143A9] items-center border border-[#F143A9]">
+                  <Twitter className="h-4 w-4" /> @DeDevsClub
                 </Badge>
               </motion.div>
               <motion.h1
@@ -65,7 +87,8 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group"
+                variant="filledBlue"
+                // className="bg-[#000000] hover:text-[#FFFFFF] hover:bg-[#00ffff]/10 hover:opacity-90 border-[#00ffff] text-[#00ffff] relative overflow-hidden group"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -75,9 +98,9 @@ export function HeroSection() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </motion.span>
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 transition-opacity"></span>
               </Button>
-              <Button size="lg" variant="outline" className="border-[#00ffff] bg-[#000000] text-[#00ffff] hover:bg-[#00ffff]/10">
+              <Button size="lg" variant="filledPink" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                 Explore Resources
               </Button>
             </motion.div>
@@ -88,25 +111,25 @@ export function HeroSection() {
               className="flex items-center gap-4 text-sm text-[#e0e0ff]"
             >
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
+                {users.map((user) => (
                   <motion.div
-                    key={i}
+                    key={user.key}
                     initial={{ opacity: 0, scale: 0.8, x: -10 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 1 + i * 0.1 }}
-                    className="h-8 w-8 rounded-full border-2 border-[#0b0014] bg-gradient-to-r from-[#f143a9]/80 to-[#00ffff]/80 overflow-hidden"
+                    transition={{ duration: 0.3, delay: 1 + user.key * 0.1 }}
+                    className="h-8 w-8 rounded-full overflow-hidden transition-transform"
                   >
                     <Image
-                      src={`/banner.png`}
+                      src={user.src}
                       width={32}
                       height={32}
-                      alt={`Community member ${i}`}
-                      className="h-full w-full object-cover mix-blend-overlay"
+                      alt={`Community member ${user.key}`}
+                      className="h-full w-full object-cover mix-blend-overlay hover:scale-125 transition-transform"
                     />
                   </motion.div>
                 ))}
               </div>
-              <span>Join 5,000+ members already in our community</span>
+              <span>Join 1,000+ members already in our community</span>
             </motion.div>
           </motion.div>
           <motion.div

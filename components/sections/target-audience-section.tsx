@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Code, Brain } from "lucide-react"
 import { InteractiveCard } from "@/components/interactive/interactive-card"
 import { SectionBackground } from "@/components/sections/section-backgrounds"

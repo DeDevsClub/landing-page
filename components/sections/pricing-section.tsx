@@ -101,7 +101,7 @@ export function PricingSection() {
               className="relative"
             >
               <Card
-                className={`border-0 bg-[#0b0014]/50 backdrop-blur-sm border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
+                className={`border-0 bg-[#0B101C]/50 backdrop-blur-sm border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
               >
                 {plan.id === "premium" && (
                   <div className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 rotate-45">
