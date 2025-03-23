@@ -21,10 +21,10 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative aspect-video overflow-hidden rounded-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#f143a9]/20 to-[#00ffff]/20 z-10 mix-blend-overlay"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-[#f143a9]/20 to-[#00ffff]/20 z-10 mix-blend-overlay"></div>
             <div className="absolute inset-0 border border-[#f143a9]/30 rounded-xl z-20"></div>
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f143a9] to-transparent z-30"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ffff] to-transparent z-30"></div>
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f143a9] to-transparent z-30"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#00ffff] to-transparent z-30"></div>
 
             {/* Grid lines */}
             <div className="absolute inset-0 flex flex-col justify-between z-5 opacity-30">
@@ -74,9 +74,9 @@ export function AboutSection() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+              <Button className="bg-linear-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
                 <span className="relative z-10">{`Join Our Community`}</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+                <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
               </Button>
               <Button variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
                 {`Learn More`}

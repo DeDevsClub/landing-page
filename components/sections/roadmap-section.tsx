@@ -316,7 +316,7 @@ export function RoadmapSection() {
                     onClick={() => setActiveQuarter(index)}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 relative ${
                       activeQuarter === index
-                        ? "text-white bg-gradient-to-r from-[#f143a9]/30 to-[#00ffff]/30"
+                        ? "text-white bg-linear-to-r from-[#f143a9]/30 to-[#00ffff]/30"
                         : "text-[#e0e0ff]/70 hover:text-white"
                     }`}
                     whileHover={{ scale: 1.05 }}
@@ -325,7 +325,7 @@ export function RoadmapSection() {
                     {quarter.label}
                     {activeQuarter === index && (
                       <motion.div
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#f143a9] to-[#00ffff]"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-[#f143a9] to-[#00ffff]"
                         layoutId="quarterIndicator"
                       />
                     )}
@@ -367,8 +367,8 @@ export function RoadmapSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
-                    <Card className="border-0 bg-[#0B101C]/50 backdrop-blur-sm border border-[#f143a9]/20 hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full">
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[item.color] to-transparent opacity-50"></div>
+                    <Card className="border-0 bg-[#0B101C]/50 backdrop-blur-xs border border-[#f143a9]/20 hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full">
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-[item.color] to-transparent opacity-50"></div>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <div className={`p-2 rounded-full bg-[${item.color}]/10 text-[${item.color}]`}>

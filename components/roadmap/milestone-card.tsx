@@ -44,7 +44,7 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
       {/* Date marker */}
       <motion.div
     //   Date Marker
-        className="flex-shrink-0 w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 relative bg-[#0B101C]"
+        className="shrink-0 w-full md:w-1/2 flex justify-center md:justify-end items-center mb-4 md:mb-0 relative bg-[#0B101C]"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}

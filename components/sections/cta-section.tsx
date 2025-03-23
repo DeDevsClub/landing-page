@@ -36,10 +36,10 @@ export function CtaSection() {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group"
+              className="bg-linear-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group"
             >
               <span className="relative z-10">Join DeDevs Today</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+              <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
             </Button>
             <Button size="lg" variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
               Explore Resources

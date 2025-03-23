@@ -12,16 +12,16 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#f143a9]/20 bg-[#0B101C] backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-[#f143a9]/20 bg-[#0B101C] backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <motion.div
-              className="h-8 w-8 rounded-full bg-gradient-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
+              className="h-8 w-8 rounded-full bg-linear-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
               <span className="text-white font-bold relative z-10">
                 <Image
                   src="/favicon.ico"
@@ -95,7 +95,7 @@ export function Header() {
                 Resources
               </Link>
               <Button
-                className="w-full bg-gradient-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white"
+                className="w-full bg-linear-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white"
                 onClick={() => setIsOpen(false)}
               >
                 Join Now

@@ -35,16 +35,16 @@ export function InteractiveCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Card className="border-0 bg-[#000000]/40 backdrop-blur-sm border border-primary/20 hover:border-secondary/40 transition-all duration-300 group overflow-hidden relative h-full">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <Card className="border-0 bg-[#000000]/40 backdrop-blur-xs border border-primary/20 hover:border-secondary/40 transition-all duration-300 group overflow-hidden relative h-full">
+        <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
         <CardHeader>
           <div className="mb-2 relative">
             {icon}
             <motion.div
-              className={`absolute -inset-2 bg-gradient-to-r ${glowColor} rounded-full blur-xl -z-10`}
+              className={`absolute -inset-2 bg-linear-to-r ${glowColor} rounded-full blur-xl -z-10`}
               initial={{ opacity: 0 }}
               animate={{ opacity: isHovered ? 0.7 : 0 }}
               transition={{ duration: 0.3 }}
@@ -56,7 +56,7 @@ export function InteractiveCard({
           <p className="text-[#FFFFFF]">{description}</p>
 
           <motion.div
-            className="w-full h-1 mt-4 bg-gradient-to-r from-primary/0 via-primary/50 to-secondary/0 rounded-full"
+            className="w-full h-1 mt-4 bg-linear-to-r from-primary/0 via-primary/50 to-secondary/0 rounded-full"
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{
               scaleX: isHovered ? 1 : 0,

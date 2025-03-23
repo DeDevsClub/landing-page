@@ -115,7 +115,7 @@ export default function RoadmapTimeline() {
                   <span className="sr-only">Previous</span>
                 </Button>
 
-                <div className="px-4 py-2 rounded-md bg-background/50 backdrop-blur-sm border border-primary/20 min-w-[120px] text-center">
+                <div className="px-4 py-2 rounded-md bg-background/50 backdrop-blur-xs border border-primary/20 min-w-[120px] text-center">
                   {roadmapData[activePeriod].label}
                 </div>
 

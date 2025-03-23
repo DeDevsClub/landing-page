@@ -59,7 +59,7 @@ export function PricingSection() {
       borderColor: "border-[#f143a9]/30",
       buttonVariant: "default" as const,
       buttonClass:
-        "hover:bg-gradient-to-r from-[#f143a9] to-[#00ffff] bg-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group",
+        "hover:bg-linear-to-r from-[#f143a9] to-[#00ffff] bg-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group",
       link: "https://whop.com/dedevs-academy",
     },
   ]
@@ -101,22 +101,22 @@ export function PricingSection() {
               className="relative"
             >
               <Card
-                className={`border-0 bg-[#0B101C]/50 backdrop-blur-sm border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
+                className={`border-0 bg-[#0B101C]/50 backdrop-blur-xs border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
               >
                 {plan.id === "premium" && (
                   <div className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 rotate-45">
-                    <Badge className="bg-gradient-to-r from-[#f143a9] to-[#00ffff] text-white border-none px-8 py-1">
+                    <Badge className="bg-linear-to-r from-[#f143a9] to-[#00ffff] text-white border-none px-8 py-1">
                       Popular
                     </Badge>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#f143a9]/5 to-[#00ffff]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f143a9] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ffff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-[#f143a9]/5 to-[#00ffff]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f143a9] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#00ffff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <div className={`p-2 rounded-full bg-gradient-to-r ${plan.hoverColor}`}>{plan.icon}</div>
+                    <div className={`p-2 rounded-full bg-linear-to-r ${plan.hoverColor}`}>{plan.icon}</div>
                     <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
                   </div>
                   <CardDescription className="text-[#e0e0ff]/80">{plan.description}</CardDescription>
@@ -169,7 +169,7 @@ export function PricingSection() {
                       )}
                     </span>
                     {plan.id === "premium" && (
-                      <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
+                      <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
                     )}
                   </Button>
                     </Link>

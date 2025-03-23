@@ -16,10 +16,10 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
               <motion.div
-                className="h-8 w-8 rounded-full bg-gradient-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
+                className="h-8 w-8 rounded-full bg-linear-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
                 <span className="text-white font-bold relative z-10">D</span>
               </motion.div>
               <span className="text-xl font-bold text-white">DeDevs</span>
