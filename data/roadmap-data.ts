@@ -126,17 +126,6 @@ import {
           status: "completed",
           icon: Users,
         },
-        {
-          id: "first-meetup",
-          date: "2023-03-20",
-          title: "First Virtual Meetup",
-          description: "Our inaugural virtual meetup featuring talks from industry experts.",
-          longDescription:
-            "We hosted our first virtual meetup with over 500 attendees. The event featured keynote presentations from industry experts on topics including 'The Future of Blockchain in AI Applications' and 'Building Decentralized AI Systems'. The event concluded with a networking session where members could connect in small groups.",
-          category: "event",
-          status: "completed",
-          icon: Users,
-        },
       ],
     },
     {
@@ -153,29 +142,7 @@ import {
           category: "product",
           status: "completed",
           icon: BookOpen,
-        },
-        {
-          id: "hackathon-1",
-          date: "2023-05-25",
-          title: "First Hackathon",
-          description: "Our first community hackathon focused on blockchain applications.",
-          longDescription:
-            "We organized our first community hackathon with the theme 'Blockchain Solutions for Real-World Problems'. Over 200 participants formed teams to build innovative blockchain applications addressing challenges in finance, supply chain, healthcare, and more. The event ran for 48 hours with mentorship sessions, workshops, and prizes for the top projects.",
-          category: "event",
-          status: "completed",
-          icon: Code,
-        },
-        {
-          id: "mentorship",
-          date: "2023-06-10",
-          title: "Mentorship Program",
-          description: "Launch of our mentorship program connecting beginners with experienced professionals.",
-          longDescription:
-            "We launched our mentorship program to connect beginners with experienced professionals in the blockchain and AI fields. The program includes one-on-one mentoring sessions, career guidance, project feedback, and networking opportunities. In the first cohort, we matched 50 mentees with industry mentors for a three-month program.",
-          category: "community",
-          status: "completed",
-          icon: Users,
-        },
+        }
       ],
     },
     {
@@ -218,45 +185,6 @@ import {
       ],
     },
     {
-      id: "q4-2023",
-      label: "Q4 2023",
-      milestones: [
-        {
-          id: "global-conference",
-          date: "2023-10-18",
-          title: "Global Virtual Conference",
-          description: "Our first global virtual conference with speakers from around the world.",
-          longDescription:
-            "We hosted our first global virtual conference spanning two days with speakers from around the world. The conference featured keynote presentations, panel discussions, technical workshops, and networking sessions. Topics covered the latest advancements in blockchain and AI technologies, real-world applications, and future trends. Over 2,000 attendees participated from more than 50 countries.",
-          category: "event",
-          status: "completed",
-          icon: Globe,
-        },
-        {
-          id: "hackathon-2",
-          date: "2023-11-15",
-          title: "AI + Blockchain Hackathon",
-          description: "Hackathon focused on projects combining AI and blockchain technologies.",
-          longDescription:
-            "We organized a specialized hackathon focused on the intersection of AI and blockchain technologies. Participants developed projects that leveraged both technologies, such as decentralized AI training platforms, blockchain-based AI marketplaces, and AI-powered smart contract systems. The event included technical workshops, mentorship from industry experts, and prizes for innovative solutions.",
-          category: "event",
-          status: "completed",
-          icon: Rocket,
-        },
-        {
-          id: "year-review",
-          date: "2023-12-20",
-          title: "Year in Review",
-          description: "Celebration of our community achievements and growth in our first year.",
-          longDescription:
-            "We concluded the year with a special event celebrating our community achievements and growth. The session included highlights from the year's events, recognition of outstanding community contributors, success stories, and statistics on our growth. We also shared insights from our community survey and outlined our vision for the coming year.",
-          category: "community",
-          status: "completed",
-          icon: Award,
-        },
-      ],
-    },
-    {
       id: "q1-2024",
       label: "Q1 2024",
       milestones: [
@@ -282,56 +210,6 @@ import {
           status: "in-progress",
           icon: Network,
         },
-        {
-          id: "research-grants",
-          date: "2024-03-10",
-          title: "Research Grants Program",
-          description: "Launch of our research grants program to fund innovative projects.",
-          longDescription:
-            "We're preparing to launch our research grants program to fund innovative projects at the intersection of blockchain and AI. The program will provide financial support, mentorship, and resources to selected projects that demonstrate potential for significant impact. Grant recipients will share their progress and findings with the community through regular updates and final presentations.",
-          category: "community",
-          status: "upcoming",
-          icon: Zap,
-        },
-      ],
-    },
-    {
-      id: "q2-2024",
-      label: "Q2 2024",
-      milestones: [
-        {
-          id: "certification",
-          date: "2024-04-20",
-          title: "Certification Program",
-          description: "Industry-recognized certification program for blockchain and AI skills.",
-          longDescription:
-            "We're developing an industry-recognized certification program for blockchain and AI skills. The program will include comprehensive assessments to validate technical knowledge and practical abilities. Certifications will be recorded on blockchain for verification and will be recognized by our partner companies for hiring and professional advancement.",
-          category: "product",
-          status: "upcoming",
-          icon: Award,
-        },
-        {
-          id: "regional-events",
-          date: "2024-05-15",
-          title: "Regional In-Person Events",
-          description: "Series of in-person meetups and workshops in major tech hubs.",
-          longDescription:
-            "We're planning a series of in-person meetups and workshops in major technology hubs around the world. These events will provide opportunities for community members to connect face-to-face, participate in hands-on workshops, and hear from local experts. Initial locations include San Francisco, New York, London, Berlin, Singapore, and Tokyo.",
-          category: "event",
-          status: "upcoming",
-          icon: Users,
-        },
-        {
-          id: "enterprise-partnerships",
-          date: "2024-06-10",
-          title: "Enterprise Partnerships",
-          description: "Strategic partnerships with enterprise companies for exclusive resources and opportunities.",
-          longDescription:
-            "We're establishing strategic partnerships with enterprise companies to provide our community with exclusive resources and opportunities. These partnerships will include access to enterprise-grade tools and platforms, specialized training programs, internship opportunities, and collaborative research initiatives. Our goal is to bridge the gap between individual developers and enterprise adoption of blockchain and AI technologies.",
-          category: "partnership",
-          status: "upcoming",
-          icon: Network,
-        },
       ],
     },
     {
@@ -348,17 +226,6 @@ import {
           category: "technology",
           status: "upcoming",
           icon: Code,
-        },
-        {
-          id: "global-hackathon",
-          date: "2024-08-20",
-          title: "Global Hackathon Series",
-          description: "Worldwide hackathon series with regional competitions and a global final.",
-          longDescription:
-            "We're organizing a global hackathon series with regional competitions leading to a global final. The series will challenge participants to build innovative solutions using blockchain and AI technologies. Regional winners will advance to the global final where they'll compete for significant prizes and opportunities to present their projects to investors and industry leaders.",
-          category: "event",
-          status: "upcoming",
-          icon: Globe,
         },
         {
           id: "research-journal",
@@ -378,17 +245,6 @@ import {
       label: "Q4 2024",
       milestones: [
         {
-          id: "annual-conference",
-          date: "2024-10-25",
-          title: "Annual Conference",
-          description: "Our flagship annual conference with keynotes, workshops, and networking opportunities.",
-          longDescription:
-            "We're planning our flagship annual conference, bringing together community members, industry leaders, and technology enthusiasts. The multi-day event will feature keynote presentations, technical workshops, panel discussions, product showcases, and extensive networking opportunities. The conference will be held in a major technology hub with options for virtual participation.",
-          category: "event",
-          status: "upcoming",
-          icon: Users,
-        },
-        {
           id: "developer-tools",
           date: "2024-11-15",
           title: "Developer Tools Suite",
@@ -398,17 +254,6 @@ import {
           category: "technology",
           status: "upcoming",
           icon: Code,
-        },
-        {
-          id: "education-partnerships",
-          date: "2024-12-10",
-          title: "Education Partnerships",
-          description: "Partnerships with universities and educational institutions for curriculum development.",
-          longDescription:
-            "We're establishing partnerships with universities and educational institutions to develop curriculum for blockchain and AI education. These partnerships will help integrate cutting-edge technologies into formal education programs, preparing students for careers in these fields. We'll provide course materials, guest lectures, project ideas, and internship opportunities to support these educational initiatives.",
-          category: "partnership",
-          status: "upcoming",
-          icon: BookOpen,
         },
       ],
     },
