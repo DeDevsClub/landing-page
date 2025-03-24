@@ -75,6 +75,37 @@
   border-radius: 4px;
 }
 
+@keyframes blood-drip {
+  0% {
+    background-size: 0% 100%;
+    background-position: 0 0;
+    box-shadow: 0 0 10px 5px rgba(139, 0, 0, 0.5);
+  }
+  /* 50% {
+    background-size: 100% 50%;
+    background-position: 0 50%;
+    box-shadow: 0 0 10px 5px rgba(139, 0, 0, 0.5);
+  } */
+  100% {
+    background-size: 100% 100%;
+    background-position: 0 100%;
+    box-shadow: 0 0 15px 10px rgba(139, 0, 0, 0.7);
+  }
+}
+
+.blood-drip-animation {
+  background-image: radial-gradient(circle at 50% 50%, #f143a9, #f143a9);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.8s ease-in-out;
+}
+
+.blood-drip-animation:hover {
+  animation: blood-drip 1s forwards;
+  border-right: 2px solid #f143a9;
+  border-radius: 4px;
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
