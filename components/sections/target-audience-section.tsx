@@ -76,19 +76,8 @@ export function TargetAudienceSection() {
         "We welcome innovators who are passionate about blockchain and AI technologies."
       } />
       <div className="container px-4 md:px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center justify-center space-y-2 text-center"
-        >
-          <div className="space-y-2">
-
-          </div>
-        </motion.div>
         {/* Audience Cards */}
-        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
+        <div className="mx-auto grid text-sm md:text-md max-w-5xl gap-6 py-12 md:grid-cols-2 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
           {audiences.map((audience, index) => (
             <InteractiveCard
               key={index}
