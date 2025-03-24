@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { URLs } from "@/constants/urls"
+import NavLinks from "./nav-links"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -38,7 +39,7 @@ export function Header() {
         {/* Mobile menu button */}
         <div className="md:hidden">
           <Button
-            variant="ghost"
+            variant="filledPink"
             size="icon"
             className="mr-2 text-white hover:text-[#00ffff]"
             aria-label="Menu"
@@ -52,78 +53,14 @@ export function Header() {
         {isOpen && (
           <div className="absolute top-16 left-0 right-0 bg-[#0B101C] border-b border-[#f143a9]/20 p-4 md:hidden">
             <nav className="flex flex-col space-y-4">
-              <Link
-                href="#about"
-                className="text-sm font-medium hover:text-[#00ffff] transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="#features"
-                className="text-sm font-medium hover:text-[#00ffff] transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Features
-              </Link>
-              <Link
-                href="#community"
-                className="text-sm font-medium hover:text-[#00ffff] transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Community
-              </Link>
-              <Link
-                href="#roadmap"
-                className="text-sm font-medium hover:text-[#00ffff] transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Roadmap
-              </Link>
-              <Link
-                href="#pricing"
-                className="text-sm font-medium hover:text-[#00ffff] transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Pricing
-              </Link>
-              <Link
-                href="#resources"
-                className="text-sm font-medium hover:text-[#00ffff] transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Resources
-              </Link>
-              <Button
-                className="w-full bg-linear-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                Join Now
-              </Button>
+              <NavLinks />
             </nav>
           </div>
         )}
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="#about" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            About
-          </Link>
-          <Link href="#features" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            Features
-          </Link>
-          <Link href="#community" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            Community
-          </Link>
-          <Link href="#roadmap" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            Roadmap
-          </Link>
-          <Link href="#pricing" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            Pricing
-          </Link>
-          <Link href="#resources" className="text-sm font-medium text-white hover:text-[#00ffff] transition-colors">
-            Resources
-          </Link>
+        <nav className="hidden md:flex items-center">
+        <NavLinks />
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
