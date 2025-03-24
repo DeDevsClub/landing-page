@@ -51,8 +51,7 @@ export function PricingSection() {
         "Private project collaborations",
         "Early access to new resources",
         "Certification opportunities",
-        "Exclusive industry events",
-        "Job board priority access",
+        "Priority access to new apps"
       ],
       cta: "Get Started",
       icon: <BookOpen className="h-8 w-8 rounded-full p-1 border-2 border-[#ffffff] bg-[#f143a9]" />,

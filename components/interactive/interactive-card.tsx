@@ -26,6 +26,7 @@ export function InteractiveCard({
   const [isHovered, setIsHovered] = useState(false)
 
   return (
+    <div className="flex flex-col items-center justify-center space-y-4 text-center">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -67,6 +68,7 @@ export function InteractiveCard({
         </CardContent>
       </Card>
     </motion.div>
+    </div>
   )
 }
 

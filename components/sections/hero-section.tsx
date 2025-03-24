@@ -100,7 +100,7 @@ export function HeroSection() {
                 </span>
                 <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 transition-opacity"></span>
               </Button>
-              <Button size="lg" variant="filledPink" link={{ href: URLS.LINKS, external: true }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+              <Button size="lg" variant="filledPink" link={{ href: URLS.TWITTER, external: true }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                 Explore Resources
               </Button>
             </motion.div>

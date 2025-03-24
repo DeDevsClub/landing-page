@@ -13,7 +13,8 @@ export function AboutSection() {
     <section id="about" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="about" className="bg-background"/>
-      <SectionHeader title="Our Mission" />
+      <SectionHeader title="Our Mission" content={`Founded in 2025 with a clear vision: to create a vibrant community where blockchain and AI
+                enthusiasts can connect, learn, and innovate together.`}/>
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <motion.div
@@ -55,13 +56,12 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="flex flex-col justify-center space-y-4"
           >
-            <div className="space-y-2">
-              <p className="text-[#e0e0ff] md:text-lg">
-                {`DeDevs was founded in 2025 with a clear vision: to create a vibrant community where blockchain and AI
-                enthusiasts can connect, learn, and innovate together. We believe that the intersection of these
-                technologies holds immense potential to transform industries and solve complex global challenges.`}
-              </p>
-              <p className="text-[#e0e0ff] md:text-lg">
+            <div className="space-y-2 bg-background rounded-xl p-4">
+               <p className="text-[#e0e0ff] md:text-lg">
+               {`We believe that the intersection of these
+               technologies holds immense potential to transform industries and solve complex global challenges`}
+               </p>
+               <p className="text-[#e0e0ff] md:text-lg">
                 {`Our community welcomes everyone from seasoned professionals to curious beginners. Whether you\'re a
                 blockchain developer, AI researcher, product manager, or simply interested in these technologies, DeDevs
                 provides the resources, connections, and opportunities to help you grow.`}
@@ -70,15 +70,11 @@ export function AboutSection() {
                 {`Through virtual events, forums, collaborative projects, and curated resources, we\'re building a global
                 network of innovators who are shaping the future of technology.`}
               </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row mb-4">
-              <Button variant="filledPink" link={{ href: URLS.CLUB, external: true }} >
-                <span className="relative z-10">{`Join Our Community`}</span>
-                <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
-              </Button>
-              <Button variant="filledBlue" link={{ href: URLS.LINKS, external: true }}>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row mb-4 justify-end">
+              <Button size="lg" variant="filledBlue" link={{ href: URLS.TWITTER, external: true }}>
                 {`Learn More`}
               </Button>
+            </div>
             </div>
           </motion.div>
         </div>

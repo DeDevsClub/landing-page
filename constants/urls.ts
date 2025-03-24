@@ -6,5 +6,6 @@ export const URLS = {
   TWITTER: "https://x.com/dedevsclub",
   CLUB: "https://whop.com/dedevs",
   ACADEMY: "https://whop.com/dedevs-academy",
-  LINKS: "https://links.dedevs.club"
+  // LINKS: "https://links.dedevs.club"
+  LINKS: "https://dedevs.club"
 };
