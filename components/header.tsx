@@ -8,6 +8,8 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { URLS } from "@/constants/urls"
 import NavLinks from "./nav-links"
+import { Badge } from "@/components/ui/badge"
+import { Twitter } from "lucide-react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,16 +39,33 @@ export function Header() {
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden">
-          <Button
-            variant="filledPink"
+        <div className="md:hidden flex justify-end gap-1">
+          <motion.div
+            initial={{ opacity: 0, x: - 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+       <Button
+            variant="outlineBlue"
             size="icon"
             className="mr-2"
+            aria-label="Menu"
+            link={{
+              href: URLS.TWITTER,
+              external: true
+            }}
+          >
+            <Twitter className="h-5 w-5" />
+          </Button>
+          <Button
+            variant={isOpen ? "filledPink" : "outlinePink"}
+            size="icon"
             aria-label="Menu"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
+          </motion.div>
         </div>
 
         {/* Mobile menu */}
@@ -60,16 +79,16 @@ export function Header() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center">
-        <NavLinks />
+          <NavLinks />
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button 
+          <Button
             variant="filledPink"
             link={{
               href: URLS.CLUB,
               external: true
-             }}
+            }}
           >
             Join Now
           </Button>
