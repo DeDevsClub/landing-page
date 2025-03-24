@@ -29,12 +29,12 @@ export function PricingSection() {
         "Monthly newsletter",
       ],
       cta: "Join for Free",
-      icon: <Users className="h-8 w-8 rounded-full p-1 border-2 border-[#ffffff] bg-[#f143a9]" />,
+      icon: <Users className="h-8 w-8 rounded-full p-1 bg-[#f143a9]" />,
       accentColor: "#f143a9",
       hoverColor: "[#f143a9]/5",
-      borderColor: "border-[#f143a9]/30",
+      borderColor: "[#f143a9]/40",
       buttonVariant: "filledBlue" as const,
-      buttonClass: "bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50 hover:opacity-90 relative overflow-hidden group",
+      buttonClass: "bg-[#f143a9]/20 text-[#f143a9] hover:opacity-90 relative overflow-hidden group",
       link: "https://whop.com/dedevs",
       badge: <CircleUser className="flex justify-center items-center text-[#000000] w-16 h-8" />
     },
@@ -54,10 +54,10 @@ export function PricingSection() {
         "Priority access to new apps"
       ],
       cta: "Get Started",
-      icon: <BookOpen className="h-8 w-8 rounded-full p-1 border-2 border-[#ffffff] bg-[#f143a9]" />,
+      icon: <BookOpen className="h-8 w-8 rounded-full p-1 bg-[#f143a9]" />,
       accentColor: "#f143a9",
       hoverColor: "[#f143a9]/5",
-      borderColor: "border-[#f143a9]/30",
+      borderColor: "[#f143a9]/40",
       buttonVariant: "filledPink" as const,
       buttonClass:
         "hover:bg-linear-to-r from-[#f143a9] to-[#00ffff] bg-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group",
@@ -86,7 +86,7 @@ export function PricingSection() {
               className="relative"
             >
               <Card
-                className={`bg-[#0B101C]/50 backdrop-blur-xs border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
+                className={`bg-[#0B101C]/50 backdrop-blur-xs border border-${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
               >
                 <div className="absolute top-2 right-0 transform translate-x-1/3 -translate-y-1/3 rotate-45 p-4">
                   <Badge className="bg-[#00ffff] border-none px-12 ml-6 flex justify-center items-center">
