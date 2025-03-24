@@ -136,6 +136,10 @@ export function PricingSection() {
                     <Button
                       variant={plan.buttonVariant}
                       size="lg"
+link={{
+href: plan.link,
+external: true
+}}
                       className={`flex w-full justify-center`}
                     >
                       {/* CTA Text */}
