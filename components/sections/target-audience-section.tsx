@@ -88,7 +88,7 @@ export function TargetAudienceSection() {
           </div>
         </motion.div>
         {/* Audience Cards */}
-        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
+        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
           {audiences.map((audience, index) => (
             <InteractiveCard
               key={index}
