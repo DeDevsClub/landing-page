@@ -54,7 +54,7 @@ export function InteractiveCard({
           <CardTitle className="text-xl text-[#FFFFFF] transition-all duration-300">{title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-[#FFFFFF]">{description}</p>
+          <p className="text-[#FFFFFF] text-sm sm:text-md">{description}</p>
 
           <motion.div
             className="w-full h-1 mt-4 bg-linear-to-r from-primary/0 via-primary/50 to-secondary/0 rounded-full"
