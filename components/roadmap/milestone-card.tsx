@@ -132,7 +132,10 @@ export function MilestoneCard({ milestone, index, isEven, onClick }: MilestoneCa
             <p className="text-muted-foreground text-sm mb-4">{milestone.description}</p>
 
             <div className="flex justify-end bg-[#ffaee0] rounded-b-lg">
-              <Button variant="ghost" size="sm" className="group-hover:translate-x-1 transition-transform duration-300">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="group-hover:translate-x-1 transition-transform duration-300">
                 View Details
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>

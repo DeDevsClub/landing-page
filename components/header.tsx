@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { URLs } from "@/constants/urls"
+import { URLS } from "@/constants/urls"
 import NavLinks from "./nav-links"
 
 export function Header() {
@@ -41,7 +41,7 @@ export function Header() {
           <Button
             variant="filledPink"
             size="icon"
-            className="mr-2 text-white hover:text-[#00ffff]"
+            className="mr-2"
             aria-label="Menu"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -66,8 +66,8 @@ export function Header() {
         <div className="hidden md:flex items-center gap-4">
           <Button 
             variant="filledPink"
-            link={{ 
-              href: URLs.main,
+            link={{
+              href: URLS.CLUB,
               external: true
              }}
           >

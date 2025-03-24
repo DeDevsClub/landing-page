@@ -69,6 +69,12 @@
   transition: background-size 0.3s ease-in-out;
 }
 
+.bg-background {
+  background-color: rgba(11, 16, 28, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .fill-up-animation:hover {
   background-size: 100% 100%;
   border-right: 2px solid #f143a9;
@@ -79,7 +85,7 @@
   0% {
     background-size: 0% 100%;
     background-position: 0 0;
-    box-shadow: 0 0 10px 5px rgba(139, 0, 0, 0.5);
+    box-shadow: 0 0 10px 5px rgba(11, 16, 28, 0.5);
   }
   /* 50% {
     background-size: 100% 50%;
@@ -89,7 +95,7 @@
   100% {
     background-size: 100% 100%;
     background-position: 0 100%;
-    box-shadow: 0 0 15px 10px rgba(139, 0, 0, 0.7);
+    box-shadow: 0 0 15px 10px rgba(11, 16, 28, 0.7);
   }
 }
 

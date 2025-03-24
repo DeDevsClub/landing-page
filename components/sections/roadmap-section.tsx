@@ -22,6 +22,7 @@ import {
   BookOpen,
 } from "lucide-react"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import { SectionHeader } from "@/components/ui/section-header"
 
 interface RoadmapItem {
   id: string
@@ -271,10 +272,9 @@ export function RoadmapSection() {
   }
 
   return (
-    <section id="roadmap" className="w-full py-12 md:py-24 lg:py-32 relative">
-      {/* Replace the old background with our new component */}
+    <section id="roadmap" className="w-full relative">
       <SectionBackground variant="roadmap" />
-
+      <SectionHeader title="DeDevs Roadmap" content={"Follow our journey and see what\'s coming next for the DeDevs community."} />
       <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

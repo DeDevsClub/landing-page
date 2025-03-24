@@ -1,11 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-// import { Button } from "@/components/ui/button"
 import { Code, Brain } from "lucide-react"
 import { InteractiveCard } from "@/components/interactive/interactive-card"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import { SectionHeader } from "@/components/ui/section-header"
 
 export function TargetAudienceSection() {
   const audiences = [
@@ -70,10 +69,12 @@ export function TargetAudienceSection() {
   ]
 
   return (
-    <section id="community" className="w-full py-8 px-12 md:py-18 lg:py-32 relative">
+    <section id="community" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="audience" />
-
+      <SectionHeader title="Who We Serve" content={
+        "We welcome innovators who are passionate about blockchain and AI technologies."
+      } />
       <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,15 +84,7 @@ export function TargetAudienceSection() {
           className="flex flex-col items-center justify-center space-y-2 text-center"
         >
           <div className="space-y-2">
-            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
-              Who We Serve
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-              Our Target Audience
-            </h2>
-            <p className="max-w-[900px] text-[#e0e0ff] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              We welcome innovators who are passionate about blockchain and AI technologies.
-            </p>
+
           </div>
         </motion.div>
         {/* Audience Cards */}
@@ -107,20 +100,6 @@ export function TargetAudienceSection() {
             />
           ))}
         </div>
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex justify-center mt-8"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Button className="bg-[#f143a9] hover:bg-secondary text-white relative overflow-hidden group">
-            <span className="relative z-10">Find Your Community</span>
-            <span className="absolute inset-0 bg-secondary hover:bg-[#f143a9] opacity-0 transition-opacity"></span>
-          </Button>
-        </motion.div> */}
       </div>
     </section>
   )

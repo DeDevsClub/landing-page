@@ -5,8 +5,9 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Check, BookOpen, Users, ArrowRight, Twitter } from "lucide-react"
+import { Check, BookOpen, Users, ArrowRight, UsersIcon, CircleUser, StarIcon, TwitterIcon } from "lucide-react"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import { SectionHeader } from '@/components/ui/section-header';
 import Link from "next/link"
 
 export function PricingSection() {
@@ -32,9 +33,10 @@ export function PricingSection() {
       accentColor: "#f143a9",
       hoverColor: "[#f143a9]/5",
       borderColor: "border-[#f143a9]/30",
-      buttonVariant: "outline" as const,
+      buttonVariant: "filledBlue" as const,
       buttonClass: "bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50 hover:opacity-90 relative overflow-hidden group",
       link: "https://whop.com/dedevs",
+      badge: <CircleUser className="flex justify-center items-center text-[#000000] w-16 h-8" />
     },
     {
       id: "premium",
@@ -57,36 +59,20 @@ export function PricingSection() {
       accentColor: "#f143a9",
       hoverColor: "[#f143a9]/5",
       borderColor: "border-[#f143a9]/30",
-      buttonVariant: "default" as const,
+      buttonVariant: "filledPink" as const,
       buttonClass:
         "hover:bg-linear-to-r from-[#f143a9] to-[#00ffff] bg-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group",
       link: "https://whop.com/dedevs-academy",
+      badge: <StarIcon className="flex justify-center items-center text-[#000000] w-16 h-8" />
     },
   ]
 
   return (
-    <section id="pricing" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section id="pricing" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="pricing" />
-
+      <SectionHeader title="Choose Your Path" />
       <div className="container px-4 md:px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center justify-center space-y-4 text-center"
-        >
-          <div className="space-y-2">
-            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50">
-              Pricing
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">Choose Your Path</h2>
-            <p className="max-w-[900px] text-[#e0e0ff] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Join our community and access resources tailored to your blockchain and AI journey.
-            </p>
-          </div>
-        </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12 mt-12 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
@@ -101,79 +87,76 @@ export function PricingSection() {
               className="relative"
             >
               <Card
-                className={`border-0 bg-[#0B101C]/50 backdrop-blur-xs border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
+                className={`bg-[#0B101C]/50 backdrop-blur-xs border ${plan.borderColor} hover:border-[#00ffff]/40 transition-all duration-300 group overflow-hidden relative h-full`}
               >
-                {plan.id === "premium" && (
-                  <div className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 rotate-45">
-                    <Badge className="bg-linear-to-r from-[#f143a9] to-[#00ffff] text-white border-none px-8 py-1">
-                      Popular
-                    </Badge>
-                  </div>
-                )}
+                <div className="absolute top-2 right-0 transform translate-x-1/3 -translate-y-1/3 rotate-45 p-4">
+                  <Badge className="bg-[#00ffff] border-none px-12 ml-6 flex justify-center items-center">
+                    {plan.badge}
+                  </Badge>
+                </div>
+
                 <div className="absolute inset-0 bg-linear-to-br from-[#f143a9]/5 to-[#00ffff]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f143a9] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#00ffff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className={`p-2 rounded-full bg-linear-to-r ${plan.hoverColor}`}>{plan.icon}</div>
-                    <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
-                  </div>
-                  <CardDescription className="text-[#e0e0ff]/80">{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-baseline">
-                    <span className="text-5xl font-bold" style={{ color: plan.accentColor }}>
-                      {plan.price}
-                    </span>
-                    <span className="text-xl text-[#e0e0ff]/60 ml-1">/{plan.period}</span>
-                  </div>
+                <Card className="bg-transparent h-full grid grid-cols-1 grid-rows-1 justify-center">
+                  <CardHeader className="grid grid-rows-1 grid-cols-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className={`p-2 rounded-full bg-linear-to-r ${plan.hoverColor}`}>{plan.icon}</div>
+                      <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
+                    </div>
+                    <CardDescription className="text-[#e0e0ff]/80">{plan.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6 grid grid-rows-1 grid-cols-1 justify-center">
+                    <div className="flex items-baseline">
+                      <span className="text-5xl font-bold" style={{ color: plan.accentColor }}>
+                        {plan.price}
+                      </span>
+                      <span className="text-xl text-[#e0e0ff]/60 ml-1">/{plan.period}</span>
+                    </div>
 
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{
-                          opacity: hoveredCard === plan.id ? 1 : 0.8,
-                          x: hoveredCard === plan.id ? 0 : -5,
-                        }}
-                        transition={{ duration: 0.3, delay: i * 0.05 }}
-                        className="flex items-start gap-2"
-                      >
-                        <Check style={{ color: plan.accentColor }} className="h-5 w-5 shrink-0 mt-0.5" />
-                        <span className="text-[#e0e0ff]/80">{feature}</span>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                    <Link
-              href={plan.link}
-              target="_blank"
-              className="text-[#e0e0ff] hover:text-[#e0e0ff]/80"
-            >
-                  <Button className={`w-full ${plan.buttonClass}`} variant={plan.buttonVariant} size="lg">
-                    {/* CTA Text */}
-                    <span className="relative z-10 flex items-center">
-                      {plan.cta}
-                      {plan.id === "premium" && (
-                        <motion.span
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <motion.li
+                          key={i}
+                          initial={{ opacity: 0, x: -10 }}
                           animate={{
-                            x: hoveredCard === plan.id ? 5 : 0,
+                            opacity: hoveredCard === plan.id ? 1 : 0.8,
+                            x: hoveredCard === plan.id ? 0 : -5,
                           }}
-                          transition={{ duration: 0.3 }}
+                          transition={{ duration: 0.3, delay: i * 0.05 }}
+                          className="flex items-start gap-2"
                         >
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </motion.span>
-                      )}
-                    </span>
-                    {plan.id === "premium" && (
+                          <Check style={{ color: plan.accentColor }} className="h-5 w-5 shrink-0 mt-0.5" />
+                          <span className="text-[#e0e0ff]/80">{feature}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                  <CardFooter className="relative bottom-0 w-full h-full">
+                    <Button
+                      variant={plan.buttonVariant}
+                      size="lg"
+                      className={`flex w-full justify-center`}
+                    >
+                      {/* CTA Text */}
+                      <span className="relative z-10 flex items-center">
+                        {plan.cta}
+                        {plan.id === "premium" && (
+                          <motion.span
+                            animate={{
+                              x: hoveredCard === plan.id ? 5 : 0,
+                            }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </motion.span>
+                        )}
+                      </span>
                       <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
-                    )}
-                  </Button>
-                    </Link>
-                </CardFooter>
+                    </Button>
+                  </CardFooter>
+                </Card>
               </Card>
 
               {/* Glow effect */}
@@ -190,30 +173,6 @@ export function PricingSection() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid grid-cols-1 w-full space-y-4 items-center mt-16 text-center"
-        >
-          <div className="grid grid-cols-1 w-full space-y-4">
-            {/* <h3 className="text-xl font-semibold text-white">Want to know more?</h3> */}
-            {/* <p className="text-[#e0e0ff]/80">
-              Follow us on social media to stay updated with the latest news and updates.
-            </p> */}
-            <Link
-              href="https://x.com/DeDevsClub"
-              target="_blank"
-              className="hover:text-[#e0e0ff]/80 w-full mx-auto py-8"
-            >
-              <Button variant="outline" className="bg-[#f143a9]/20 text-[#f143a9] border border-[#f143a9]/50 hover:bg-[#f143a9]/10 mt-2 w-full">
-                <Twitter className="h-4 w-4" /> @DeDevsClub
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

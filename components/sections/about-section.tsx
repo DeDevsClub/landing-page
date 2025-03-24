@@ -5,13 +5,15 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import { URLS } from "@/constants/urls"
+import { SectionHeader } from "@/components/ui/section-header"
 
 export function AboutSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section id="about" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
-      <SectionBackground variant="about" />
-
+      <SectionBackground variant="about" className="bg-background"/>
+      <SectionHeader title="Our Mission" />
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <motion.div
@@ -26,7 +28,7 @@ export function AboutSection() {
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f143a9] to-transparent z-30"></div>
             <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#00ffff] to-transparent z-30"></div>
 
-            {/* Grid lines */}
+            {/* Gridlines */}
             <div className="absolute inset-0 flex flex-col justify-between z-5 opacity-30">
               {Array.from({ length: 5 }).map((_, i) => (
                 <div key={i} className="h-px bg-[#00ffff]/50"></div>
@@ -54,10 +56,6 @@ export function AboutSection() {
             className="flex flex-col justify-center space-y-4"
           >
             <div className="space-y-2">
-              <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#00ffff]/20 text-[#00ffff] border border-[#00ffff]/50">
-                About Us
-              </Badge>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">Our Mission</h2>
               <p className="text-[#e0e0ff] md:text-lg">
                 {`DeDevs was founded in 2025 with a clear vision: to create a vibrant community where blockchain and AI
                 enthusiasts can connect, learn, and innovate together. We believe that the intersection of these
@@ -73,12 +71,12 @@ export function AboutSection() {
                 network of innovators who are shaping the future of technology.`}
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button className="bg-linear-to-r from-[#f143a9] to-[#00ffff] hover:opacity-90 text-white relative overflow-hidden group">
+            <div className="flex flex-col gap-2 min-[400px]:flex-row mb-4">
+              <Button variant="filledPink" link={{ href: URLS.CLUB, external: true }} >
                 <span className="relative z-10">{`Join Our Community`}</span>
                 <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 group-hover:opacity-50 transition-opacity"></span>
               </Button>
-              <Button variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
+              <Button variant="filledBlue" link={{ href: URLS.LINKS, external: true }}>
                 {`Learn More`}
               </Button>
             </div>

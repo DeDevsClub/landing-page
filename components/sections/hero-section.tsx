@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Twitter } from "lucide-react"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
-// import Link from "next/link"
+import { URLS } from "@/constants/urls"
 
 export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
@@ -33,7 +33,7 @@ export function HeroSection() {
   }
   ]
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden bg-[#0B101C]">
+    <section className="w-full xl:py-48 relative overflow-hidden bg-[#0B101C]">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="hero" />
       <motion.div
@@ -88,7 +88,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="filledBlue"
-                // className="bg-[#000000] hover:text-[#FFFFFF] hover:bg-[#00ffff]/10 hover:opacity-90 border-[#00ffff] text-[#00ffff] relative overflow-hidden group"
+                link={{ href: URLS.CLUB, external: true }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -100,7 +100,7 @@ export function HeroSection() {
                 </span>
                 <span className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-0 transition-opacity"></span>
               </Button>
-              <Button size="lg" variant="filledPink" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+              <Button size="lg" variant="filledPink" link={{ href: URLS.LINKS, external: true }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                 Explore Resources
               </Button>
             </motion.div>

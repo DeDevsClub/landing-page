@@ -31,9 +31,9 @@ export default function LandingPage() {
         <FeaturesSection />
         <TargetAudienceSection />
         <PricingSection />
-        <RoadmapSection />
+        {/* <RoadmapSection /> */}
         <AboutSection />
-        <CtaSection />
+        {/* <CtaSection /> */}
       </main>
       <Footer />
     </div>

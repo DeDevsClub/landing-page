@@ -172,7 +172,6 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
         <>
           {baseBackground}
           {renderAnimatedGradient()}
-          {renderFloatingParticles(20, ["#f143a9", "#00ffff"])}
           {renderGridLines(0.1, 10, "both")}
           {renderGlowEffect("#f143a9", "bottom", 40, 0.1)}
           <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-[#1a0b2e] to-[#0B101C] via-[#f143a9] z-0"></div>
@@ -185,7 +184,6 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {baseBackground}
           {renderCyberGrid(0.05)}
           {renderGridLines(0.1, 8, "horizontal")}
-          {renderFloatingParticles(10, ["#00ffff"])}
           {sectionBorders}
           <motion.div
             className="absolute inset-0 z-0 opacity-5"
@@ -209,9 +207,7 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
       return (
         <>
           {baseBackground}
-          {renderStars(30)}
           {renderGridLines(0.1, 6, "vertical")}
-          {renderFloatingParticles(10, ["#f143a9"])}
           {sectionBorders}
           <motion.div
             className="absolute inset-0 z-0 bg-linear-to-r from-[#1a0b2e] to-[#0B101C]"
@@ -246,7 +242,6 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {baseBackground}
           {renderCyberGrid(0.03)}
           {renderGridLines(0.1, 15, "horizontal")}
-          {renderFloatingParticles(8, ["#f143a9", "#00ffff"])}
           {sectionBorders}
           <div className="absolute inset-0 bg-linear-to-r from-[#1a0b2e] to-[#0B101C] z-0"></div>
         </>
@@ -258,7 +253,6 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
           {baseBackground}
           {renderMountains()}
           {renderGridLines(0.1, 5, "both")}
-          {renderStars(20)}
           {sectionBorders}
           <motion.div
             className="absolute inset-0 z-0 opacity-10 bg-linear-to-r from-[#1a0b2e] to-[#0B101C]"

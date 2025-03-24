@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
 import { Network, BookOpen, Code, Brain } from "lucide-react"
 import { InteractiveCard } from "@/components/interactive/interactive-card"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import { SectionHeader } from "@/components/ui/section-header"
 
 export function FeaturesSection() {
   const features = [
@@ -39,38 +39,29 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section id="features" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="features" />
-
-      <div className="container px-4 md:px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center justify-center space-y-4 text-center"
-        >
-          <div className="space-y-2">
-            <Badge className="inline-flex rounded-md px-3 py-1 text-sm bg-[#00ffff]/20 text-[#00ffff] border border-[#00ffff]/50">
-              Features
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">Why Join DeDevs?</h2>
-            <p className="max-w-[900px] text-[#e0e0ff] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Our community offers unique benefits for blockchain and AI enthusiasts at all levels.
-            </p>
-          </div>
-        </motion.div>
-        <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2">
+      <SectionHeader title="Why Join DeDevs?" content={"Connect with thousands of blockchain and AI enthusiasts, access exclusive resources, and be part of groundbreaking collaborative projects."} />
+      <div className="container relative z-10">
+        <div className="mx-auto grid max-w-screen gap-8 py-2 md:grid-cols-2">
           {features.map((feature, index) => (
-            <InteractiveCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              glowColor={feature.glowColor}
-              delay={index * 0.1}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            // className="flex flex-col items-center justify-center space-y-4 text-center"
+            >
+              <InteractiveCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                glowColor={feature.glowColor}
+                delay={index * 0.1}
+              />
+            </motion.div>
           ))}
         </div>
       </div>

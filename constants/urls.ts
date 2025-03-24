@@ -1,9 +1,10 @@
-export const URLs = {
-  main: "https://dedevs.club",
-  terminal: "https://terminal.dedevs.club",
-  blog: "https://blog.dedevs.club",
-  docs: "https://docs.dedevs.club",
-  twitter: "https://x.com/dedevsclub",
-  club: "https://whop.com/dedevs",
-  academy: "https://whop.com/dedevs-academy"
+export const URLS = {
+  MAIN: "https://dedevs.club",
+  TERMINAL: "https://terminal.dedevs.club",
+  BLOG: "https://blog.dedevs.club",
+  DOCS: "https://docs.dedevs.club",
+  TWITTER: "https://x.com/dedevsclub",
+  CLUB: "https://whop.com/dedevs",
+  ACADEMY: "https://whop.com/dedevs-academy",
+  LINKS: "https://links.dedevs.club"
 };
