@@ -53,6 +53,28 @@
   }
 }
 
+@keyframes fill-up {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.fill-up-animation {
+  background-image: linear-gradient(to right, #f143a9 0%, #f143a9 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.fill-up-animation:hover {
+  background-size: 100% 100%;
+  border-right: 2px solid #f143a9;
+  border-radius: 4px;
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
@@ -154,4 +176,3 @@
     @apply bg-background text-foreground;
   }
 }
-
