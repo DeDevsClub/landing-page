@@ -40,18 +40,16 @@ export function FeaturesSection() {
 
   return (
     <section id="features" className="w-full relative overflow-hidden">
-      {/* Replace the old background with our new component */}
       <SectionBackground variant="features" />
       <SectionHeader title="Why Join DeDevs?" content={"Connect with thousands of blockchain and AI enthusiasts, access exclusive resources, and be part of groundbreaking collaborative projects."} />
       <div className="container relative z-10">
-        <div className="mx-auto grid max-w-screen gap-8 py-2 md:grid-cols-2">
+        <div className="mx-auto grid text-sm md:text-md max-w-screen gap-8 py-2 md:grid-cols-2">
           {features.map((feature, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            // className="flex flex-col items-center justify-center space-y-4 text-center"
             >
               <InteractiveCard
                 key={index}
