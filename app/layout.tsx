@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
+import { URLS } from "@/constants/urls"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,9 +17,58 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DeDevs - Blockchain and AI Community",
+  title: {
+    default: "DeDevs Club",
+    template: "%s | DeDevs Club"
+  },
   description: "A community for blockchain and AI engineers and enthusiasts",
-    generator: 'v0.dev'
+  keywords: [
+    "DeDevs",
+    "DeDevs Club",
+    "Next.js"
+  ],
+  authors: [{ name: "DeDevsClub", url: "https://github.com/DeDevsClub" }],
+  creator: "DeDevsClub",
+  publisher: "DeDevsClub",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(URLS.MAIN),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "DeDevs Club",
+    description: "A community for blockchain and AI engineers and enthusiasts",
+    url: URLS.MAIN,
+    siteName: "DeDevs Club",
+    images: [
+      {
+        url: new URL("/images/og-image.png", URLS.MAIN),
+        width: 1200,
+        height: 630,
+        alt: "DeDevs Club",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DeDevs Club",
+    description: "A community for blockchain and AI engineers and enthusiasts",
+    creator: "@DeDevsClub",
+    images: [new URL("/images/og-image.png", URLS.MAIN)],
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  category: "Technology",
+  manifest: new URL("/site.webmanifest", URLS.MAIN),
 }
 
 const inter = Inter({ subsets: ["latin"] })

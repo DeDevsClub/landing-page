@@ -30,9 +30,9 @@ export default function LandingPage() {
         <HeroSection />
         <FeaturesSection />
         <TargetAudienceSection />
-        <PricingSection />
+        {/* <PricingSection /> */}
         {/* <RoadmapSection /> */}
-        <AboutSection />
+        {/* <AboutSection /> */}
         {/* <CtaSection /> */}
       </main>
       {/* <Footer /> */}

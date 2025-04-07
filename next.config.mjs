@@ -5,7 +5,8 @@ const nextConfig = {
         "images.unsplash.com", 
         "nextjs.org", 
         "raw.githubusercontent.com",
-        "pbs.twimg.com"
+        "pbs.twimg.com",
+        "x.com"
     ],
   },
 };

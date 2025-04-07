@@ -1,0 +1,14 @@
+{
+    "name": "DeDevs Club",
+    "short_name": "DeDevs Club",
+    "icons": [
+      {
+        "src": "/favicon.svg",
+        "sizes": "192x192",
+        "type": "image/svg"
+      }
+    ],
+    "theme_color": "#F300A8",
+    "background_color": "#000000",
+    "display": "standalone"
+  }

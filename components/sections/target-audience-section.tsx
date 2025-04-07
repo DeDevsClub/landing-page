@@ -77,7 +77,7 @@ export function TargetAudienceSection() {
       } />
       <div className="container px-4 md:px-6 relative z-10">
         {/* Audience Cards */}
-        <div className="mx-auto grid text-sm md:text-md max-w-5xl gap-6 py-12 md:grid-cols-2 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
+        <div className="mx-auto grid text-sm md:text-md max-w-full gap-6 py-12 md:grid-cols-2 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
           {audiences.map((audience, index) => (
             <InteractiveCard
               key={index}

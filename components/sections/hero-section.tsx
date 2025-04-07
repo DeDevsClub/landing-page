@@ -13,25 +13,24 @@ export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false)
   const users = [{
     key: 1,
-    src: "https://pbs.twimg.com/profile_images/1863535589145915392/6OUF5yp2_400x400.jpg",
+    src: "/images/members/0xbuns.png",
     handle: "0xbuns"
   },
   {
     key: 2,
-    src: "https://pbs.twimg.com/profile_images/1660702029541457943/egKTfIgY_400x400.jpg",
+    src: "/images/members/santygegen.png",
     handle: "santygegen"
   },
   {
     key: 3,
-    src: "https://pbs.twimg.com/profile_images/1888739662853984256/pDBZ8ZoI_400x400.jpg",
+    src: "/images/members/brookejlacey.png",
     handle: "brookejlacey"
   },
   {
     key: 4,
-    src: "https://pbs.twimg.com/profile_images/1878951982007767040/6WZKHzlx_400x400.jpg",
+    src: "/images/members/kuphdev.png",
     handle: "kuphdev"
-  }
-  ]
+  }]
   return (
     <section
       className="h-[600px] w-full flex items-center justify-center text-lg overflow-hidden bg-[#0B101C] relative"
@@ -42,12 +41,12 @@ export function HeroSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="absolute inset-0 justify-center text-center bg-gradient-to-b from-transparent to-[#0B101C]/80 z-0"></div>
+      <div className="relative inset-0 justify-center text-center bg-gradient-to-b from-transparent to-[#0B101C]/80 z-0"></div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col h-[512px] bg-[#0B101C] items-center justify-center py-8 w-full max-w-5xl px-12 shadow-lg rounded-xl sm:px-32 z-10"
+        className="flex flex-col h-[512px] bg-[#0B101C] items-center justify-center py-8 w-full max-w-[85vw] px-12 shadow-lg rounded-xl sm:px-32 z-10"
       >
         <div className="text-[#e0e0ff] font-light grid grid-cols-1 justify-center items-center md:text-xl mt-4 w-full text-center bg-gradient-to-r from-[#f143a9] to-[#00ffff] rounded-xl p-2">
         <motion.h1
