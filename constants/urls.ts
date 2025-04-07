@@ -4,8 +4,8 @@ export const URLS = {
   BLOG: "https://blog.dedevs.club",
   DOCS: "https://docs.dedevs.club",
   TWITTER: "https://x.com/dedevsclub",
-  CLUB: "https://whop.com/dedevs",
-  ACADEMY: "https://whop.com/dedevs-academy",
+  CLUB: "https://skool.com/devs",
+  ACADEMY: "https://skool.com/devs",
   // LINKS: "https://links.dedevs.club"
   LINKS: "https://dedevs.club"
 };

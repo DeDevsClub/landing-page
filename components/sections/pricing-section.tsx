@@ -35,7 +35,7 @@ export function PricingSection() {
       borderColor: "[#f143a9]/40",
       buttonVariant: "filledBlue" as const,
       buttonClass: "bg-[#f143a9]/20 text-[#f143a9] hover:opacity-90 relative overflow-hidden group",
-      link: "https://whop.com/dedevs",
+      link: "https://skool.com/devs",
       badge: <CircleUser className="flex justify-center items-center text-[#000000] w-16 h-8" />
     },
     {
@@ -61,7 +61,7 @@ export function PricingSection() {
       buttonVariant: "filledPink" as const,
       buttonClass:
         "hover:bg-linear-to-r from-[#f143a9] to-[#00ffff] bg-[#f143a9] hover:opacity-90 text-white relative overflow-hidden group",
-      link: "https://whop.com/dedevs-academy",
+      link: "https://skool.com/devs",
       badge: <StarIcon className="flex justify-center items-center text-[#000000] w-16 h-8" />
     },
   ]
