@@ -8,8 +8,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { URLS } from "@/constants/urls"
 import NavLinks from "./nav-links"
-import { Badge } from "@/components/ui/badge"
-import { Twitter } from "lucide-react"
+import { Icon } from "@iconify/react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,7 +54,7 @@ export function Header() {
               external: true
             }}
           >
-            <Twitter className="h-5 w-5" />
+            <Icon icon="ri:twitter-x-fill" className="h-5 w-5" />
           </Button>
           <Button
             variant={isOpen ? "filledPink" : "outlinePink"}
