@@ -9,6 +9,9 @@ const nextConfig = {
         "x.com"
     ],
   },
+  experimental: {
+    motion: true,
+  },
 };
 
 export default nextConfig;

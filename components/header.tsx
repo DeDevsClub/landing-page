@@ -8,24 +8,23 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { URLS } from "@/constants/urls"
 import NavLinks from "./nav-links"
-import { Badge } from "@/components/ui/badge"
-import { Twitter } from "lucide-react"
+import { Icon } from "@iconify/react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#f143a9]/20 bg-[#0B101C] backdrop-blur-sm">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full max-w-screen-xl mx-auto border-b-2 border-muted/20 backdrop-blur-sm bg-background">
+      <div className="sticky top-0 z-50 flex h-16 items-center justify-between p-2">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 bg-background">
             <motion.div
-              className="h-8 w-8 rounded-full bg-linear-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
+              className="h-8 w-8 rounded-full bg-background flex items-center justify-center relative overflow-hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <div className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
-              <span className="text-white font-bold relative z-10">
+              <div className="absolute inset-0 bg-background opacity-70 animate-pulse"></div>
+              <span className="text-text font-bold relative z-10">
                 <Image
                   src="/favicon.ico"
                   width={32}
@@ -34,7 +33,7 @@ export function Header() {
                 />
               </span>
             </motion.div>
-            <span className="text-xl font-bold text-white">DeDevs</span>
+            <span className="text-xl font-bold text-text">DeDevs</span>
           </Link>
         </div>
 
@@ -45,20 +44,18 @@ export function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
+            <Link href={URLS.TWITTER} target="_blank" rel="noopener noreferrer">
        <Button
-            variant="outlineBlue"
+            variant="outline"
             size="icon"
             className="mr-2"
             aria-label="Menu"
-            link={{
-              href: URLS.TWITTER,
-              external: true
-            }}
           >
-            <Twitter className="h-5 w-5" />
+            <Icon icon="ri:twitter-x-fill" className="h-5 w-5" />
           </Button>
+          </Link>
           <Button
-            variant={isOpen ? "filledPink" : "outlinePink"}
+            variant={isOpen ? "default" : "outline"}
             size="icon"
             aria-label="Menu"
             onClick={() => setIsOpen(!isOpen)}
@@ -70,7 +67,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-[#0B101C] border-b border-[#f143a9]/20 p-4 md:hidden">
+          <div className="absolute top-16 left-0 right-0 bg-background border-b border-muted/20 p-4 md:hidden">
             <nav className="flex flex-col space-y-4">
               <NavLinks />
             </nav>
@@ -78,20 +75,18 @@ export function Header() {
         )}
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center">
+        <nav className="hidden md:flex items-center bg-background">
           <NavLinks />
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          <Link href={URLS.CLUB} target="_blank" rel="noopener noreferrer">
           <Button
-            variant="filledPink"
-            link={{
-              href: URLS.CLUB,
-              external: true
-            }}
+            variant="default"
           >
             Join Now
           </Button>
+          </Link>
         </div>
       </div>
     </header>

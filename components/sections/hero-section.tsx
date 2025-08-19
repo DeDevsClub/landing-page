@@ -4,9 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Twitter } from "lucide-react"
-import { SectionBackground } from "@/components/sections/section-backgrounds"
+import { ArrowRight, Link } from "lucide-react"
 import { URLS } from "@/constants/urls"
 
 export function HeroSection() {
@@ -33,7 +31,7 @@ export function HeroSection() {
   }]
   return (
     <section
-      className="h-[600px] w-full flex items-center justify-center text-lg overflow-hidden bg-[#0B101C] relative"
+      className="h-[600px] w-full flex items-center justify-center text-lg overflow-hidden bg-background relative"
       style={{
         backgroundImage: `url('/background.png')`,
         backgroundSize: 'cover',
@@ -46,14 +44,14 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col h-[512px] bg-[#0B101C] items-center justify-center py-8 w-full max-w-[85vw] px-12 shadow-lg rounded-xl sm:px-32 z-10"
+        className="flex flex-col h-[512px] bg-background items-center justify-center py-8 w-full max-w-[85vw] px-12 shadow-lg rounded-xl sm:px-32 z-10"
       >
         <div className="text-[#e0e0ff] font-light grid grid-cols-1 justify-center items-center md:text-xl mt-4 w-full text-center bg-gradient-to-r from-[#f143a9] to-[#00ffff] rounded-xl p-2">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl text-white text-center bg-[#000000] rounded-t-lg p-2"
+          className="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl text-white text-center bg-background rounded-t-lg p-2"
         >
           DeDevs Club
         </motion.h1>
@@ -61,7 +59,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex w-full justify-center items-center text-[#e0e0ff] py-4 md:text-xl text-center bg-[#000000] rounded-b-lg"
+          className="flex w-full justify-center items-center text-[#e0e0ff] py-4 md:text-xl text-center bg-background rounded-b-lg"
         >
           {`Connect with like-minded engineers and enthusiasts to network, share knowledge, and collaborate on
           groundbreaking projects at the intersection of blockchain and AI.`}
@@ -101,11 +99,12 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="flex flex-col w-full gap-2 min-[400px]:flex-row mt-8"
         >
+          <Link href={URLS.CLUB}>
           <Button
             size="lg"
-            variant="filledBlue"
+            variant="default"
             className="flex items-center w-full text-sm md:text-md justify-between"
-            link={{ href: URLS.CLUB, external: true }}
+            // link={{ href: URLS.CLUB, external: true }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -117,6 +116,7 @@ export function HeroSection() {
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 transition-opacity"></span>
           </Button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
