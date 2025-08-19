@@ -24,17 +24,25 @@ export default function LandingPage() {
       {/* <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920&text=Grid')] bg-repeat opacity-10 pointer-events-none dark:opacity-10 light:opacity-5"></div> */}
       <main className="flex flex-col justify-center items-center gap-8 relative">
         <LandingHeader />
-        <section className="w-full border-t">
+      <section className="w-full border-t">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-14">
           <Waitlist />
+</div>
         </section>
-        <section className="w-full border-t">
+      <section className="w-full border-t">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-14">
           <FeatureHero />
+</div>
         </section>
-        <section className="w-full border-t">
+      <section className="w-full border-t">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-14">
           <ProductsSection />
+</div>
         </section>
-        <section className="w-full border-t">
+      <section className="w-full border-t">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-14">
           <TargetAudienceSection />
+</div>
         </section>
       </main>
       <Footer />
