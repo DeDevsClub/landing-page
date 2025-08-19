@@ -90,7 +90,7 @@ return (
             <p className="mt-2 text-muted-foreground">Capture links, code, ideas, todos, events, and reminders. Organize with Notes and Bookmarks. Create once, reuse everywhere.</p>
             <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
               {notesFeatures.map((feature) => (
-                <li key={feature.title} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> {feature.title}</li>
+                <li key={feature.title} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-text text-xs" /> {feature.title}</li>
               ))}
             </ul>
             <div className="flex flex-cols gap-1 justify-center mt-5 w-full">
