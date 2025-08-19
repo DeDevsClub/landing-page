@@ -3,16 +3,10 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Icon } from "@iconify/react"
-import { URLS } from "@/constants/urls"
+import { socialLinks } from "@/constants/urls"
 import { motion } from "framer-motion"
 
 export function Footer() {
-
-  const socialLinks = [
-    { href: URLS.TWITTER, label: "X (Twitter)", aria: "X (Twitter)", icon: "ri:twitter-x-fill" },
-    { href: URLS.CLUB, label: "Club", aria: "Club", icon: "lucide:users" },
-    { href: URLS.DOCS, label: "Docs", aria: "Docs", icon: "lucide:book-open" },
-  ]
   return (
     <footer className="w-full border-t">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-10">

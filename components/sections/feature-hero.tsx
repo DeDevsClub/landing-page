@@ -1,18 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowRight, Terminal, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HighlightText } from "@/components/text-highlight";
 
 import { motion } from "framer-motion";
-import ActionButton from "../action-button";
 import { HexagonBackground } from "./background";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { quickLinks } from "@/constants/urls"
+import { quickLinks } from "@/constants/urls";
 
 export default function FeatureHero() {
     // Feature dot styling
@@ -60,18 +57,6 @@ export default function FeatureHero() {
             return () => clearTimeout(typingTimer);
         }
     }, [responseIndex]);
-
-    // Get partial response for typing animation
-    const getPartialResponse = () => fullResponse.slice(0, responseIndex);
-
-    // Template categories with icons
-    // const templates = [
-    //   { name: "Content Writer", active: activeTab === 0 },
-    //   { name: "Code Assistant", active: activeTab === 1 },
-    //   { name: "Data Analysis", active: activeTab === 2 },
-    //   { name: "Image Gen", active: activeTab === 3 },
-    // ];
-
     return (
         <section
             id="hero"
@@ -181,7 +166,7 @@ export default function FeatureHero() {
                 </div>
             </div>
           <div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {quickLinks.map((link) => (
                   <Link
                     key={link.href}
