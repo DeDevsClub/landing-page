@@ -20,7 +20,7 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-background text-foreground overflow-hidden">
+  <div className="flex flex-col h-screen justify-center items-center text-center mx-auto">
       {/* <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920&text=Grid')] bg-repeat opacity-10 pointer-events-none dark:opacity-10 light:opacity-5"></div> */}
       <main className="flex flex-col justify-center items-center gap-8 relative">
         <LandingHeader />
