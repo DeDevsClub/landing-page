@@ -29,23 +29,23 @@ const bookmarks = [
 const notesFeatures = [
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
-    title: "Interactive tasks with updates",
+    title: "Interactive task tracking",
     description: "Interactive tasks with updates.",
   },
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
-    title: "Calendar reminder with priority",
+    title: "Reminders with priorities",
     description: "Reminders with priorities.",
   },
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
-    title: "One-click edit from any card",
+    title: "Edit from within any card",
     description: "Edit from within any card.",
   },
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
-    title: "Store notes in notebooks",
-    description: "Store notes in notebooks.",
+    title: "Write notes in notebooks",
+    description: "Write notes in notebooks.",
   },
 ];
 
@@ -137,7 +137,7 @@ rel="noopener noreferrer"
             <ul className="mt-4 space-y-2 text-xs lg:text-sm grid grid-cols-2 gap-1 sm:gap-2">
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-text" /> Smart metadata extraction</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-text" />Organize with collections</li>
-              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-text" />Save, upvote, comment, or share</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-text" />Save, upvote, and comment</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-text" /> Easy to use and understand</li>
             </ul>
             <div className="flex justify-center mt-5">
