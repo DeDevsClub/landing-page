@@ -88,9 +88,9 @@ return (
             </div>
             <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Store Notes</h2>
             <p className="mt-2 text-muted-foreground">Capture links, code, ideas, todos, events, and reminders. Organize with Notes and Bookmarks. Create once, reuse everywhere.</p>
-            <ul className="mt-4 space-y-2 text-xs md:text-sm grid grid-cols-2 gap-1 sm:gap-2">
+            <ul className="mt-4 space-y-2 text-xs lg:text-sm grid grid-cols-2 gap-1 sm:gap-2">
               {notesFeatures.map((feature) => (
-                <li key={feature.title} className="flex items-start gap-2"><CheckCircle2 className="md:mt-0.5 size-4 md:size-5 text-text" /> {feature.title}</li>
+                <li key={feature.title} className="flex items-start gap-2"><CheckCircle2 className="lg:mt-0.5 size-4 lg:size-5 text-text" /> {feature.title}</li>
               ))}
             </ul>
             <div className="flex flex-cols gap-1 justify-center mt-5 w-full">
@@ -134,11 +134,11 @@ rel="noopener noreferrer"
               {/* <span className="text-xs text-muted-foreground">(beta)</span> */}
             </h2>
             <p className="mt-2 text-muted-foreground">One shortcut to capture links, generate previews, and tag content. Powerful search makes everything instantly findable.</p>
-            <ul className="mt-4 space-y-2 text-xs md:text-sm grid grid-cols-2 gap-1 sm:gap-2">
-              <li className="flex items-start gap-2"><CheckCircle2 className="md:mt-0.5 side-4 md:size-5 text-text" /> Smart metadata extraction</li>
-              <li className="flex items-start gap-2"><CheckCircle2 className="md:mt-0.5 size-4 md:size-5 text-text" />Organize with collections</li>
-              <li className="flex items-start gap-2"><CheckCircle2 className="md:mt-0.5 size-4 md:size-5 text-text" />Save, upvote, and comment</li>
-              <li className="flex items-start gap-2"><CheckCircle2 className="md:mt-0.5 size-4 md:size-5 text-text" /> Easy to use and understand</li>
+            <ul className="mt-4 space-y-2 text-xs lg:text-sm grid grid-cols-2 gap-1 sm:gap-2">
+              <li className="flex items-start gap-2"><CheckCircle2 className="lg:mt-0.5 size-4 lg:size-5 text-text" /> Smart metadata extraction</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="lg:mt-0.5 size-4 lg:size-5 text-text" />Organize with collections</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="lg:mt-0.5 size-4 lg:size-5 text-text" />Save, upvote, and comment</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="lg:mt-0.5 size-4 lg:size-5 text-text" /> Easy to use and understand</li>
             </ul>
             <div className="flex justify-center mt-5">
               <Link href="https://vibes.guide/bookmarks" className="flex flex-col w-full"
