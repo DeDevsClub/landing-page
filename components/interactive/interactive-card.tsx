@@ -36,7 +36,7 @@ export function InteractiveCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Card className="border-0 bg-[#000000]/40 backdrop-blur-xs border border-primary/20 hover:border-secondary/40 transition-all duration-300 group overflow-hidden relative h-full">
+      <Card className="border-0 bg-background/40 backdrop-blur-xs border border-primary/20 hover:border-secondary/40 transition-all duration-300 group overflow-hidden relative h-full">
         <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

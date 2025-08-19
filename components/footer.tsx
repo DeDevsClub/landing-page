@@ -1,169 +1,78 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { Twitter, Github, Linkedin, DiscIcon as Discord } from "lucide-react"
 import { SectionBackground } from "@/components/sections/section-backgrounds"
+import Image from "next/image"
+import { Icon } from "@iconify/react"
+import { URLS } from "@/constants/urls"
 
 export function Footer() {
   return (
-    <footer className="w-full py-6 md:py-12 border-t border-[#f143a9]/20 relative">
+    <footer className="w-full py-6 border-t border-[#f143a9]/20 relative">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="footer" />
 
-      <div className="container px-4 md:px-6 relative z-10">
+      <div className="flex flex-col items-center w-full max-w-screen-xl relative z-10 mx-auto">
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full">
             <Link href="/" className="flex items-center gap-2">
-              <motion.div
-                className="h-8 w-8 rounded-full bg-linear-to-r from-[#f143a9] to-[#00ffff] flex items-center justify-center relative overflow-hidden"
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="absolute inset-0 bg-linear-to-r from-[#f143a9] to-[#00ffff] opacity-70 animate-pulse"></div>
-                <span className="text-white font-bold relative z-10">D</span>
-              </motion.div>
+            <Image
+              src="/logo.png"
+              alt="DeDevs Logo"
+              width={32}
+              height={32}
+            />
               <span className="text-xl font-bold text-white">DeDevs</span>
             </Link>
-            <p className="text-[#e0e0ff]/70 max-w-[400px]">
-              A vibrant community for blockchain and machine learning engineers and enthusiasts to connect, learn, and
-              innovate together.
-            </p>
-            <div className="flex gap-4">
-              <motion.div whileHover={{ scale: 1.1, y: -2 }}>
-                <Link href="#" className="text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1, y: -2 }}>
-                <Link href="#" className="text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                  <Discord className="h-5 w-5" />
-                  <span className="sr-only">Discord</span>
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1, y: -2 }}>
-                <Link href="#" className="text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1, y: -2 }}>
-                <Link href="#" className="text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Link>
-              </motion.div>
-            </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2">
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-white">Community</h3>
-              <ul className="space-y-2">
+          <div className="w-full">
+            <nav aria-label="Footer">
+              <ul className="flex items-center gap-2 md:gap-3 whitespace-nowrap overflow-x-auto pb-2 [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Forums
+                  <Link href={URLS.MAIN} aria-label="Website" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:globe-2" width={20} height={20} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Events
+                  <Link href={URLS.BLOG} aria-label="Blog" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:newspaper" width={20} height={20} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Discord
+                  <Link href={URLS.DOCS} aria-label="Docs" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:book-open" width={20} height={20} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Projects
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-white">Resources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Blog
+                  <Link href={URLS.TERMINAL} aria-label="Terminal" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:terminal" width={20} height={20} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Tutorials
+                  <Link href={URLS.LINKS} aria-label="Links" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:link-2" width={20} height={20} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Documentation
+                  <Link href={URLS.TWITTER} aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="ri:twitter-x-fill" width={20} height={20} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Podcasts
+                  <Link href={URLS.CLUB} aria-label="Club" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:users" width={20} height={20} />
+                  </Link>
+                </li>
+                <li>
+                  <Link href={URLS.ACADEMY} aria-label="Academy" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
+                    <Icon icon="lucide:graduation-cap" width={20} height={20} />
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-white">Company</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Partners
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-white">Legal</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Terms
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Privacy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Cookies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-[#e0e0ff]/70 hover:text-[#00ffff] transition-colors">
-                    Licenses
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            </nav>
           </div>
-        </div>
-        <div className="mt-8 border-t border-[#f143a9]/20 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-xs text-[#e0e0ff]/50">© {new Date().getFullYear()} DeDevs. All rights reserved.</p>
-          <p className="text-xs text-[#e0e0ff]/50 mt-4 sm:mt-0">Made with passion by the DeDevs team</p>
         </div>
       </div>
     </footer>
   )
 }
-
