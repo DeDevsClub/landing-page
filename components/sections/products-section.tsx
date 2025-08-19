@@ -78,7 +78,7 @@ const notesPreviewCards = [
 
 export default function ProductsSection() {
 return (
- <section id="products" className="w-full">
+ <section id="products" className="w-full max-w-screen-2xl">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-12">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Notes column */}
@@ -99,17 +99,17 @@ return (
 target="_to"
 rel="noopener noreferrer"
 >
-                <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><NotebookPen className="mr-2 h-4 w-4" />Store Notes</Button></Link>
+                <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><NotebookPen className="mr-2 h-4 w-4" />Notes</Button></Link>
                 <Link href="https://vibes.guide/tasks"
                 className="flex flex-col w-full"
 target="_to"
 rel="noopener noreferrer">
-                <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><SquareCheck className="mr-2 h-4 w-4" />Track Tasks</Button></Link>
+                <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><SquareCheck className="mr-2 h-4 w-4" />Tasks</Button></Link>
                 <Link href="https://vibes.guide/reminders"
 target="_to"
 rel="noopener noreferrer"
                 className="flex flex-col w-full">
-                <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><CalendarDays className="mr-2 h-4 w-4" />Check Reminders</Button></Link>
+                <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><CalendarDays className="mr-2 h-4 w-4" />Reminders</Button></Link>
             </div>
 
             {/* Mini interactive preview cards */}
