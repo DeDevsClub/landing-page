@@ -52,25 +52,25 @@ const notesFeatures = [
 const notesPreviewCards = [
   {
     icon: <Link2 className="h-3.5 w-3.5" />,
-    title: "URL Note",
+    title: "Bookmarks",
     description: "Design systems that scale",
     action: "https://ui.dedevs.com"
   },
   {
     icon: <CalendarDays className="h-3.5 w-3.5" />,
-    title: "Event",
+    title: "Events",
     description: "Ship v1 launch",
     action: "Tomorrow at 14:00 PM CST"
   },
   {
     icon: <Bell className="h-3.5 w-3.5" />,
-    title: "Reminder",
+    title: "Reminders",
     description: "Follow up with beta users",
     action: "Overdue by 4 hours"
   },
   {
     icon: <CheckCircle2 className="h-3.5 w-3.5" />,
-    title: "Todo",
+    title: "Tasks",
     description: "Polish onboarding flow",
     action: "1/4 tasks completed"
   },
