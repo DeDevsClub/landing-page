@@ -22,7 +22,8 @@ export default function LandingPage() {
   return (
   <div className="min-h-screen w-full h-full bg-background overflow-hidden mx-auto flex flex-col items-center">
       {/* <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920&text=Grid')] bg-repeat opacity-10 pointer-events-none dark:opacity-10 light:opacity-5"></div> */}
-      <main className="flex flex-col justify-center items-center gap-8 relative">
+*/}
+      <section className="relative w-full overflow-hidden">
         <LandingHeader />
       <section className="w-full border-t">
         <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-14">
@@ -44,7 +45,7 @@ export default function LandingPage() {
           <TargetAudienceSection />
 </div>
         </section>
-      </main>
+      </section>
       <Footer />
     </div>
   )
