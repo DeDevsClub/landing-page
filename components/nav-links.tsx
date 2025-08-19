@@ -2,13 +2,13 @@ import Link from "next/link"
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#features', label: 'Features' },
+  { href: '#products', label: 'Products' },
   { href: '#community', label: 'Community' }
 ]
 
 // const mobileNavLinks = [
 //   { href: '#about', label: 'About' },
-//   { href: '#features', label: 'Features' },
+//   { href: '#products', label: 'Products' },
 //   { href: '#community', label: 'Community' },
 //   { href: '#roadmap', label: 'Roadmap' },
 //   { href: '#pricing', label: 'Pricing' },

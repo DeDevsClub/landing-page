@@ -2,14 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRight, Terminal, Sparkles } from "lucide-react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { HighlightText } from "@/components/text-highlight";
 
 import { motion } from "framer-motion";
 import ActionButton from "../action-button";
 import { HexagonBackground } from "./background";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { quickLinks } from "@/constants/urls"
 
 export default function FeatureHero() {
     // Feature dot styling
@@ -77,125 +80,128 @@ export default function FeatureHero() {
             <HexagonBackground />
 
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1000px_400px_at_50%_-50%,hsl(var(--primary)/0.15),transparent_60%)]" />
-            <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-16 sm:py-12 text-center">
-                <motion.h1
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight p-6 bg-muted rounded-md mb-4 sm:mb-12"
+            <div className="mx-auto max-w-5xl px-4 sm:px-12 py-12 text-center space-y-2 bg-background w-full border-dashed rounded-md">
+
+                <div className="my-8 max-w-5xl mx-auto justify-center items-center w-[60%]" />
+
+                {/* Content wrapper with smooth entrance animations */}
+                <div
+                    className={cn(
+                        "grid grid-cols-1 lg:gap-4 transition-all duration-700 transform mx-auto items-center justify-center w-full rounded-md mt-12 py-12 border-y-4 px-4",
+                        "border-pink-300 dark:border-pink-500",
+                        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+                    )}
                 >
-                    DeDevs Club
-                </motion.h1>
-                <motion.h2
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight"
-                >
-                    A global community for builders at the edge of AI and blockchain.
-                </motion.h2>
-                <motion.p
+                    {/* Hero text and features */}
+                    <div className="lg:col-span-12 space-y-4 rounded-md w-full bg-background mx-auto flex flex-col items-center justify-center max-w-5xl">
+
+                        {/* Window chrome bar */}
+                        <div className="absolute left-2 top-2 flex items-center space-x-2 p-2">
+                            <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                            <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+                            <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                        </div>
+                                <Badge className="bg-pink-500/10 hover:bg-pink-500/20 text-pink-500 transition-colors">
+                                    DeDevs: Builders for Builders
+                                </Badge>
+                        <div>
+                        <div className="text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight space-y-2 py-2 lg:py-2">
+                                    <HighlightText
+                                        text="Welcome to DeDevs"
+                                    // inViewMargin="-100px"
+                                    // transition={{ duration: 12, ease: "easeInOut" }}
+                                    // inView={true}
+                                    // className="text-text px-2 rounded-md bg-pink-200 dark:bg-pink-500"
+                                    />
+                                </div>
+                {/* <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="mt-4 text-muted-foreground text-lg sm:text-xl max-w-3xl mx-auto"
+                    className="text-text text-lg max-w-5xl mx-auto bg-muted p-2 border-t rounded-b-md"
                 >
-                    Learn, build, and ship with peers worldwide. From workshops and code labs to open collaboration and career acceleration—join us to create the future together.
-                </motion.p>
-            </div>
+                    Learn, build, and ship with peers worldwide.
+                    From workshops and code labs to open collaboration and career acceleration.
+                    Join us to create the future together.
+                </motion.p> */}
+                </div>
+                        <motion.div>
+                            <div className="space-y-0 text-center bg-background rounded-t-md py-1 lg:p-1 z-10">
+                                <div className="text-xl font-semibold tracking-tight space-y-2 py-2 lg:py-2">
+                                Our mission is to empower builders with the tools they need to build with ease.
+                                </div>
+                            </div>
+                            {/* Feature highlights */}
+                            <div className="gap-4 lg:gap-2 items-center grid grid-cols-2 lg:grid-cols-2 grid-rows-2 rounded-md justify-center sm:px-8 p-4 lg:p-2 border-t-4 bg-muted">
+                                <div className="space-y-1 lg:space-y-2">
+                                    <div className="grid grid-cols-1 items-center gap-2">
+                                        {/* <span className={featureDot} /> */}
+                                        <span className="font-medium text-sm">Prompt Builder</span>
+                                        <div className="text-xs text-muted-foreground">
+                                            Design, test, and deploy prompts that perform.
+                                        </div>
+                                    </div>
+                                </div>
 
-            {/* // p-2 rounded-md justify-center items-center sm:mt-0 */}
-            {/* <div
-          className="px-2 mx-auto relative z-10 min-h-full w-full max-w-screen py-12 sm:py-0 sm:flex sm:flex-col justify-center items-center "
-          > */}
-            {/* Content wrapper with smooth entrance animations */}
-            <div
-                className={cn(
-                    "grid grid-cols-1 lg:grid-cols-2 lg:gap-4 transition-all duration-700 transform mx-auto items-center justify-center w-fit rounded-md",
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                )}
-            >
-                {/* Left column: Hero text and features */}
-                <div className="lg:col-span-12 space-y-2 border-4 border-border rounded-md w-full bg-muted mx-auto flex flex-col items-center justify-center max-w-screen-md max-h-screen-2xl mb-2">
+                                <div className="space-y-1">
+                                    <div className="grid grid-cols-1 items-center gap-2">
+                                        {/* <span className={featureDot} /> */}
+                                        <span className="font-medium text-sm">
+                                            Bookmarks Manager
+                                        </span>
+                                    </div>
+                                    <div className="text-xs text-muted-foreground">
+                                        Save and organize links, snippets, and resources.
+                                    </div>
+                                </div>
 
-                    {/* Window chrome bar */}
-                    <div className="absolute left-2 top-2 flex items-center space-x-2 p-2">
-                        <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                        <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                        <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                                <div className="space-y-1">
+                                    <div className="grid grid-cols-1 items-center gap-2">
+                                        {/* <span className={featureDot} /> */}
+                                        <span className="font-medium text-sm">Smart Notes</span>
+                                    </div>
+                                    <div className="text-xs text-muted-foreground">
+                                        Capture ideas and structure research effortlessly.
+                                    </div>
+                                </div>
+
+                                <div className="space-y-1">
+                                    <div className="grid grid-cols-1 items-center gap-2">
+                                        {/* <span className={featureDot} /> */}
+                                        <span className="font-medium text-sm">Knowledge Management</span>
+                                    </div>
+                                    <div className="text-xs text-muted-foreground">
+                                        Centralize docs and insights for fast retrieval.
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
-                    <motion.div>
-                        <div className="space-y-2 text-center bg-background rounded-t-md p-2 z-10">
-                            <Badge className="bg-pink-500/10 hover:bg-pink-500/20 text-pink-500 transition-colors">
-                                VibesGuide | Knowledge Management for Builders
-                            </Badge>
-                            <div className="text-2xl sm:text-3xl lg:text-[2.5rem] font-bold tracking-tight space-y-2 py-2 lg:py-2">
-                                Speak the{" "}
-                                <span
-                                    className="text-text px-2 py-1 rounded-md bg-pink-200 dark:bg-pink-500"
-                                >{" "}
-                                    language of AI{" "}
-                                </span>{" "}
-                                <br />
-                                with your VibesGuide
-                            </div>
-
-                            <div className="text-sm md:text-md lg:text-lg text-muted-foreground xl:max-w-screen lg:py-2">
-                                Your workspace for crafting, testing, and deploying AI prompts
-                                — with templates and powerful analytics.
-                            </div>
-                        </div>
-                        {/* Feature highlights */}
-                        <div className="gap-4 items-center grid grid-cols-2 lg:grid-cols-2 grid-rows-2 justify-center sm:px-12 p-4 border-t-4 bg-muted">
-                            <div className="space-y-1">
-                                <div className="flex items-center">
-                                    <span className={featureDot} />
-                                    <span className="font-medium text-sm">Prompt Builder</span>
-                                </div>
-                                <p className="text-xs text-muted-foreground">
-                                    Design, test, and deploy prompts that perform.
-                                </p>
-                            </div>
-
-                            <div className="space-y-1">
-                                <div className="flex items-center">
-                                    <span className={featureDot} />
-                                    <span className="font-medium text-sm">
-                                        Bookmarks
-                                    </span>
-                                </div>
-                                <p className="text-xs text-muted-foreground">
-                                    Save and organize links, snippets, and resources.
-                                </p>
-                            </div>
-
-                            <div className="space-y-1">
-                                <div className="flex items-center">
-                                    <span className={featureDot} />
-                                    <span className="font-medium text-sm">Notes</span>
-                                </div>
-                                <p className="text-xs text-muted-foreground">
-                                    Capture ideas and structure research effortlessly.
-                                </p>
-                            </div>
-
-                            <div className="space-y-1">
-                                <div className="flex items-center">
-                                    <span className={featureDot} />
-                                    <span className="font-medium text-sm">Knowledge Management</span>
-                                </div>
-                                <p className="text-xs text-muted-foreground">
-                                    Centralize docs and insights for fast retrieval.
-                                </p>
-                            </div>
-                        </div>
-                    </motion.div>
                 </div>
             </div>
-
+          <div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-label={link.aria}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <motion.div whileHover={{ y: -4 }} className="rounded-xl border bg-card p-4 shadow-sm h-full">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Icon icon={link.icon} width={16} height={16} />
+                        <span className="font-medium">{link.label}</span>
+                      </div>
+                      <p className="mt-1 text-xs text-muted-foreground/80 truncate">{new URL(link.href).hostname}</p>
+                    </motion.div>
+                  </Link>
+                ))}
+              </div>
+          </div>
             {/* Decorative gradient elements */}
             {/* <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" />
         <div className="absolute -bottom-48 -right-48 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000" /> */}

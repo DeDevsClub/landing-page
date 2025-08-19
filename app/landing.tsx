@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import { TargetAudienceSection } from "@/components/sections/target-audience-section"
 import FeatureHero from "@/components/sections/feature-hero"
 import Waitlist from "@/components/waitlist"
-import FeaturesSection from "@/components/sections/features-section"
+import ProductsSection from "@/components/sections/products-section"
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false)
@@ -31,7 +31,7 @@ export default function LandingPage() {
           <FeatureHero />
         </section>
         <section className="w-full border-t">
-          <FeaturesSection />
+          <ProductsSection />
         </section>
         <section className="w-full border-t">
           <TargetAudienceSection />

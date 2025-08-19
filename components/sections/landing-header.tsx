@@ -28,8 +28,8 @@ import { Logo } from "../logo";
 import { ThemeToggle } from "../theme-toggle";
 import JoinButton from "../join-button";
 import ActionButton from "../action-button";
-import Image from "next/image";
 import { HexagonBackground } from "@/components/sections/background";
+import Image from "next/image";
 
 const TopMenu = [
   {
@@ -78,8 +78,7 @@ const TopMenu = [
   //     },
   //   ],
   // },
-  { name: "Benefits", href: "/#benefits" },
-  { name: "Features", href: "/#features" },
+  { name: "Products", href: "/#products" },
   { name: "Community", href: "/#community" },
 ];
 
@@ -103,7 +102,7 @@ export default function LandingHeader() {
                   className="h-4 w-4 lg:h-6 lg:w-6"
                   // transition={transition}
                 />
-                <p className="text-md lg:text-md font-semibold text-text">
+                <p className="text-md lg:text-md font-semibold text-text ml-2">
                   DeDevs Club
                 </p>
               </Link>
@@ -128,20 +127,25 @@ export default function LandingHeader() {
                                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md
                                     bg-pink-300 hover:bg-pink-500 hover:text-pink-50 transition-all duration-500
                                     "
-                                    href="/"
+                                    href="https://skool.com/devs"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                   >
-                                    {/* <Image
+                                    <div className="flex items-center gap-2 mb-1 mt-1 text-lg font-semibold">
+                                      <Image
                                       src="/favicon.ico"
                                       alt="logo"
                                       width={12}
                                       height={12}
-                                      className="h-8 w-8"
-                                    /> */}
-                                    <div className="mb-2 mt-4 text-md font-semibold">
-                                      DeDevs Club
+                                      className="h-6 w-6 cursor-pointer"
+                                    />
+                                    DeDevs
+                                  </div>
+                                    <div className="mb-1 mt-1 text-md font-semibold">
+                                      Join DeDevs Club
                                     </div>
-                                    <p className="text-sm leading-tight text-muted-foreground">
-                                      A community for blockchain and AI engineers and enthusiasts.
+                                    <p className="text-xs leading-tight text-muted-foreground">
+                                      Join us on Skool.
                                     </p>
                                   </Link>
                                 </NavigationMenuLink>

@@ -76,9 +76,9 @@ const notesPreviewCards = [
   },
 ];
 
-export default function FeaturesSection() {
+export default function ProductsSection() {
   return (
-    <section className="w-full border-t" id="features">
+    <section className="w-full border-t" id="products">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-14">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Notes column */}
