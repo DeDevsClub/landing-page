@@ -46,7 +46,6 @@ const notesFeatures = [
     icon: <NotebookPen className="h-3.5 w-3.5" />,
     title: "Store notes in notebooks",
     description: "Store notes in notebooks.",
-l
   },
 ];
 
