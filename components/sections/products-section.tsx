@@ -20,7 +20,7 @@ const bookmarks = [
     url: "https://skool.com/devs"
   },
   {
-    title: "DeDevs Club",
+    title: "@DeDevsClub",
     description: "Follow us on Twitter.",
     url: "https://twitter.com/DeDevsClub"
   },
