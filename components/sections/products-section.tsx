@@ -21,8 +21,8 @@ const bookmarks = [
   },
   {
     title: "@DeDevsClub",
-    description: "Follow us on Twitter.",
-    url: "https://twitter.com/DeDevsClub"
+    description: "Follow us on X.",
+    url: "https://x.com/DeDevsClub"
   },
 ];
 
@@ -35,12 +35,12 @@ const notesFeatures = [
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
     title: "Calendar reminder with priority",
-    description: "Calendar reminders with priority.",
+    description: "Reminders with priorities.",
   },
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
     title: "One-click edit from any card",
-    description: "One-click edit from any card.",
+    description: "Edit from within any card.",
   },
   {
     icon: <NotebookPen className="h-3.5 w-3.5" />,
@@ -136,8 +136,8 @@ rel="noopener noreferrer"
             <p className="mt-2 text-muted-foreground">One shortcut to capture links, generate previews, and tag content. Powerful search makes everything instantly findable.</p>
             <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Smart metadata extraction</li>
-              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Organize with tags and collections</li>
-              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Open, share, or convert to notes</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />Organize with collections</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />Save, upvote, comment, or share</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Easy to use and understand</li>
             </ul>
             <div className="flex justify-center mt-5">
