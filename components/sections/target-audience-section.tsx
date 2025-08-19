@@ -70,14 +70,14 @@ export function TargetAudienceSection() {
             <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground">
               <Code className="h-3.5 w-3.5" /> Community
             </div>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Who we serve</h2>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Our Community</h2>
             <p className="mt-2 text-muted-foreground">We welcome innovators who are passionate about blockchain and AI technologies.</p>
-            <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
+            {/* <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Blockchain developers, AI researchers</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Product managers and founders</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Students and early-career builders</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Collaborators across chains & models</li>
-            </ul>
+            </ul> */}
           </div>
 
           {/* Right column: audience preview cards */}
