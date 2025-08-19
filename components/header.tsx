@@ -44,20 +44,18 @@ export function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
+            <Link href={URLS.TWITTER} target="_blank" rel="noopener noreferrer">
        <Button
-            variant="outlineBlue"
+            variant="outline"
             size="icon"
             className="mr-2"
             aria-label="Menu"
-            link={{
-              href: URLS.TWITTER,
-              external: true
-            }}
           >
             <Icon icon="ri:twitter-x-fill" className="h-5 w-5" />
           </Button>
+          </Link>
           <Button
-            variant={isOpen ? "filledPink" : "outlinePink"}
+            variant={isOpen ? "default" : "outline"}
             size="icon"
             aria-label="Menu"
             onClick={() => setIsOpen(!isOpen)}
@@ -82,15 +80,13 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          <Link href={URLS.CLUB} target="_blank" rel="noopener noreferrer">
           <Button
-            variant="filledPink"
-            link={{
-              href: URLS.CLUB,
-              external: true
-            }}
+            variant="default"
           >
             Join Now
           </Button>
+          </Link>
         </div>
       </div>
     </header>

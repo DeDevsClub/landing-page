@@ -19,7 +19,7 @@
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2); 
+  --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -41,11 +41,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-
---animate-accordion-down: accordion-down 0.2s ease-out;
---animate-accordion-up: accordion-up 0.2s ease-out;
-
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
 :root {
@@ -121,6 +118,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -130,14 +128,17 @@
   from {
     height: 0;
   }
+
   to {
     height: var(--radix-accordion-content-height);
   }
 }
+
 @keyframes accordion-up {
   from {
     height: var(--radix-accordion-content-height);
   }
+
   to {
     height: 0;
   }
@@ -145,65 +146,68 @@
 
 
 @keyframes fill-up {
-0% {
-  background-size: 0% 100%;
-}
-100% {
-  background-size: 100% 100%;
-}
+  0% {
+    background-size: 0% 100%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
 }
 
 .fill-up-animation {
-background-image: linear-gradient(to right, #f143a9 0%, #f143a9 100%);
-background-size: 0% 100%;
-background-repeat: no-repeat;
-transition: background-size 0.3s ease-in-out;
+  background-image: linear-gradient(to right, #f143a9 0%, #f143a9 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
 }
 
+/* 
 .bg-background {
 background-color: rgba(11, 16, 28, 0.5);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-}
+} */
 
 .fill-up-animation:hover {
-background-size: 100% 100%;
-border-right: 2px solid #f143a9;
-border-radius: 4px;
+  background-size: 100% 100%;
+  border-right: 2px solid #f143a9;
+  border-radius: 4px;
 }
 
 @keyframes blood-drip {
-0% {
-  background-size: 0% 100%;
-  background-position: 0 0;
-  box-shadow: 0 0 10px 5px rgba(11, 16, 28, 0.5);
-}
-/* 50% {
+  0% {
+    background-size: 0% 100%;
+    background-position: 0 0;
+    box-shadow: 0 0 10px 5px rgba(11, 16, 28, 0.5);
+  }
+
+  /* 50% {
   background-size: 100% 50%;
   background-position: 0 50%;
   box-shadow: 0 0 10px 5px rgba(139, 0, 0, 0.5);
 } */
-100% {
-  background-size: 100% 100%;
-  background-position: 0 100%;
-  box-shadow: 0 0 15px 10px rgba(11, 16, 28, 0.7);
-}
+  100% {
+    background-size: 100% 100%;
+    background-position: 0 100%;
+    box-shadow: 0 0 15px 10px rgba(11, 16, 28, 0.7);
+  }
 }
 
 .blood-drip-animation {
-background-image: radial-gradient(circle at 50% 50%, #f143a9, #f143a9);
-background-size: 0% 100%;
-background-repeat: no-repeat;
-transition: background-size 0.8s ease-in-out;
+  background-image: radial-gradient(circle at 50% 50%, #f143a9, #f143a9);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.8s ease-in-out;
 }
 
 .blood-drip-animation:hover {
-animation: blood-drip 1s forwards;
-border-right: 2px solid #f143a9;
-border-radius: 4px;
+  animation: blood-drip 1s forwards;
+  border-right: 2px solid #f143a9;
+  border-radius: 4px;
 }
 
-@utility container {
+/* @utility container {
 margin-inline: auto;
 padding-inline: 2rem;
 @media (width >= --theme(--breakpoint-sm)) {
@@ -212,4 +216,4 @@ padding-inline: 2rem;
 @media (width >= 2400px) {
   max-width: 2400px;
 }
-}
+} */

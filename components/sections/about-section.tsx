@@ -9,6 +9,7 @@ import { URLS } from "@/constants/urls"
 import { SectionHeader } from "@/components/ui/section-header"
 import { useEffect, useState } from "react"
 import { Globe2, Users, Sparkles, Rocket, Cpu, Blocks } from "lucide-react"
+import Link from "next/link"
 
 function CountUp({ to, duration = 1200, suffix = "" }: { to: number; duration?: number; suffix?: string }) {
   const [value, setValue] = useState(0)
@@ -30,7 +31,7 @@ export function AboutSection() {
   return (
     <section id="about" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
-      <SectionBackground variant="about" className="bg-background"/>
+      <SectionBackground variant="about" className="bg-background" />
       <div className="container px-4 md:px-6 relative z-10">
         <SectionHeader
           title="Our Mission"
@@ -47,7 +48,7 @@ export function AboutSection() {
         </div>
 
         <div className="grid gap-8 grid-cols-1 lg:gap-12 items-center">
-        
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,11 +57,11 @@ export function AboutSection() {
             className="flex flex-col justify-center space-y-5 bg-background h-full w-full"
           >
             <div className="space-y-3 bg-background/70 backdrop-blur rounded-xl p-4 border border-white/5">
-               <p className="text-text md:text-lg">
-               {`We believe that the intersection of these
+              <p className="text-text md:text-lg">
+                {`We believe that the intersection of these
                technologies holds immense potential to transform industries and solve complex global challenges.`}
-               </p>
-               <p className="text-text md:text-lg">
+              </p>
+              <p className="text-text md:text-lg">
                 {`Our community welcomes everyone from seasoned professionals to curious beginners. Whether you're a
                 blockchain developer, AI researcher, product manager, or simply interested in these technologies, DeDevs
                 provides the resources, connections, and opportunities to help you grow.`}
@@ -69,7 +70,7 @@ export function AboutSection() {
                 {`Through virtual events, forums, collaborative projects, and curated resources, we're building a global
                 network of innovators who are shaping the future of technology.`}
               </p>
-            </div>  
+            </div>
 
             {/* Value props */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -105,13 +106,16 @@ export function AboutSection() {
 
             {/* CTAs */}
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-start">
-              <Button size="lg" variant="filledBlue" link={{ href: URLS.TWITTER, external: true }} aria-label="Follow updates on X">
-                {`Join the Conversation`}
-              </Button>
+
+              <Link href={URLS.TWITTER} target="_blank" aria-label="Follow updates on X" rel="noopener noreferrer">
+                <Button size="lg" variant="default">
+                  {`Join the Conversation`}
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
-        </div>
+      </div>
     </section>
   )
 }

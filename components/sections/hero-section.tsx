@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Link } from "lucide-react"
 import { URLS } from "@/constants/urls"
 
 export function HeroSection() {
@@ -99,11 +99,12 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="flex flex-col w-full gap-2 min-[400px]:flex-row mt-8"
         >
+          <Link href={URLS.CLUB}>
           <Button
             size="lg"
-            variant="filledBlue"
+            variant="default"
             className="flex items-center w-full text-sm md:text-md justify-between"
-            link={{ href: URLS.CLUB, external: true }}
+            // link={{ href: URLS.CLUB, external: true }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -115,6 +116,7 @@ export function HeroSection() {
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-[#f143a9] to-[#00ffff] opacity-0 transition-opacity"></span>
           </Button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
