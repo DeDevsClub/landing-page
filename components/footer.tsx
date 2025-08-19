@@ -1,74 +1,65 @@
 "use client"
 
 import Link from "next/link"
-import { SectionBackground } from "@/components/sections/section-backgrounds"
 import Image from "next/image"
 import { Icon } from "@iconify/react"
 import { URLS } from "@/constants/urls"
+import { motion } from "framer-motion"
 
 export function Footer() {
-  return (
-    <footer className="w-full py-6 border-t border-[#f143a9]/20 relative">
-      {/* Replace the old background with our new component */}
-      <SectionBackground variant="footer" />
+  const links = [
+    { href: URLS.MAIN, label: "Website", aria: "Website", icon: "lucide:globe-2" },
+    { href: URLS.BLOG, label: "Blog", aria: "Blog", icon: "lucide:newspaper" },
+    { href: URLS.DOCS, label: "Docs", aria: "Docs", icon: "lucide:book-open" },
+    { href: URLS.TERMINAL, label: "Terminal", aria: "Terminal", icon: "lucide:terminal" },
+    { href: URLS.LINKS, label: "Links", aria: "Links", icon: "lucide:link-2" },
+    { href: URLS.TWITTER, label: "X (Twitter)", aria: "X (Twitter)", icon: "ri:twitter-x-fill" },
+    { href: URLS.CLUB, label: "Club", aria: "Club", icon: "lucide:users" },
+    { href: URLS.ACADEMY, label: "Academy", aria: "Academy", icon: "lucide:graduation-cap" },
+  ]
 
-      <div className="flex flex-col items-center w-full max-w-screen-xl relative z-10 mx-auto">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="flex flex-col gap-4 w-full">
-            <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="DeDevs Logo"
-              width={32}
-              height={32}
-            />
-              <span className="text-xl font-bold text-white">DeDevs</span>
+  return (
+    <footer className="w-full border-t">
+      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-10">
+        <div className="grid grid-cols-1 gap-10 items-start">
+          {/* Left: brand + badge + blurb */}
+          <div>
+            {/* <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-2">
+                <Image src="/logo.png" alt="DeDevs Logo" width={16} height={16} className="rounded-sm" />
+                DeDevs
+              </span>
+            </div> */}
+            <Link href="/" className="mt-3 flex items-center gap-2">
+              <Image src="/logo.png" alt="DeDevs Logo" width={28} height={28} />
+              <span className="text-xl font-semibold tracking-tight">DeDevs</span>
             </Link>
+            <p className="mt-2 text-sm text-muted-foreground">Build at the intersection of blockchain and AI. Join our community to learn, collaborate, and ship.</p>
           </div>
-          <div className="w-full">
-            <nav aria-label="Footer">
-              <ul className="flex items-center gap-2 md:gap-3 whitespace-nowrap overflow-x-auto pb-2 [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
-                <li>
-                  <Link href={URLS.MAIN} aria-label="Website" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:globe-2" width={20} height={20} />
+
+          {/* Right: link cards */}
+          <div>
+            <nav aria-label="Footer links">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {links.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-label={item.aria}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <motion.div whileHover={{ y: -4 }} className="rounded-xl border bg-card p-4 shadow-sm h-full">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Icon icon={item.icon} width={16} height={16} />
+                        <span className="font-medium">{item.label}</span>
+                      </div>
+                      <p className="mt-1 text-xs text-muted-foreground/80 truncate">{new URL(item.href).hostname}</p>
+                    </motion.div>
                   </Link>
-                </li>
-                <li>
-                  <Link href={URLS.BLOG} aria-label="Blog" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:newspaper" width={20} height={20} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href={URLS.DOCS} aria-label="Docs" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:book-open" width={20} height={20} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href={URLS.TERMINAL} aria-label="Terminal" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:terminal" width={20} height={20} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href={URLS.LINKS} aria-label="Links" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:link-2" width={20} height={20} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href={URLS.TWITTER} aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="ri:twitter-x-fill" width={20} height={20} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href={URLS.CLUB} aria-label="Club" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:users" width={20} height={20} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href={URLS.ACADEMY} aria-label="Academy" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md text-[#e0e0ff]/70 hover:text-[#00ffff] hover:bg-white/5 transition-colors">
-                    <Icon icon="lucide:graduation-cap" width={20} height={20} />
-                  </Link>
-                </li>
-              </ul>
+                ))}
+              </div>
             </nav>
           </div>
         </div>

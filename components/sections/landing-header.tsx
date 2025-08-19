@@ -29,6 +29,7 @@ import { ThemeToggle } from "../theme-toggle";
 import JoinButton from "../join-button";
 import ActionButton from "../action-button";
 import Image from "next/image";
+import { HexagonBackground } from "@/components/sections/background";
 
 const TopMenu = [
   {
@@ -79,14 +80,14 @@ const TopMenu = [
   // },
   { name: "Benefits", href: "/#benefits" },
   { name: "Features", href: "/#features" },
-  { name: "FAQ", href: "/#faq" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Community", href: "/#community" },
 ];
 
 export default function LandingHeader() {
   return (
     // wanna make sticky add these classed to header as well "sticky top-0"
     <header className="top-0 fixed w-full py-1 px-3 border-b border-border/40 bg-background/50 dark:bg-muted/50 backdrop-blur-md z-100">
+      <HexagonBackground />
       <div className="max-w-7xl mx-auto">
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">

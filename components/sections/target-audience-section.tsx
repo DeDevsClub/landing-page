@@ -1,10 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Brain } from "lucide-react"
-import { InteractiveCard } from "@/components/interactive/interactive-card"
-import { SectionBackground } from "@/components/sections/section-backgrounds"
-import { SectionHeader } from "@/components/ui/section-header"
+import { Code, Brain, CheckCircle2 } from "lucide-react"
 
 export function TargetAudienceSection() {
   const audiences = [
@@ -13,14 +10,12 @@ export function TargetAudienceSection() {
       title: "Blockchain Developers",
       description:
         "Whether you're building on Ethereum, Solana, or other chains, connect with peers to solve complex problems and explore new protocols.",
-      glowColor: "from-[#f143a9]/20 to-[#f143a9]/5",
     },
     {
       icon: <Brain className="h-10 w-10 text-[#00ffff]" />,
       title: "AI Researchers",
       description:
         "Share your latest findings, discuss cutting-edge papers, and collaborate on projects pushing the boundaries of machine learning.",
-      glowColor: "from-[#00ffff]/20 to-[#00ffff]/5",
     },
     {
       icon: (
@@ -42,7 +37,6 @@ export function TargetAudienceSection() {
       title: "Product Managers",
       description:
         "Bridge the gap between technical innovation and market needs. Gain insights to build products at the intersection of blockchain and AI.",
-      glowColor: "from-[#f143a9]/20 to-[#f143a9]/5",
     },
     {
       icon: (
@@ -64,33 +58,44 @@ export function TargetAudienceSection() {
       title: "Students & Beginners",
       description:
         "Start your journey with mentorship from industry experts. Access learning resources and hands-on projects to build your skills and portfolio.",
-      glowColor: "from-[#00ffff]/20 to-[#00ffff]/5",
     },
   ]
 
   return (
-    <section id="community" className="w-full relative overflow-hidden">
-      {/* Replace the old background with our new component */}
-      <SectionBackground variant="audience" />
-      <SectionHeader title="Who We Serve" content={
-        "We welcome innovators who are passionate about blockchain and AI technologies."
-      } />
-      <div className="container px-4 md:px-6 relative z-10">
-        {/* Audience Cards */}
-        <div className="mx-auto grid text-sm md:text-md max-w-full gap-6 py-12 md:grid-cols-2 border-y-8 border-[#f143a9]/40 mt-10 border-rounded-lg rounded-lg">
-          {audiences.map((audience, index) => (
-            <InteractiveCard
-              key={index}
-              icon={audience.icon}
-              title={audience.title}
-              description={audience.description}
-              glowColor={audience.glowColor}
-              delay={index * 0.1}
-            />
-          ))}
+    <section id="community" className="w-full">
+      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 gap-10 items-start">
+          {/* Left column: header + description + checklist */}
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground">
+              <Code className="h-3.5 w-3.5" /> Community
+            </div>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Who we serve</h2>
+            <p className="mt-2 text-muted-foreground">We welcome innovators who are passionate about blockchain and AI technologies.</p>
+            <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Blockchain developers, AI researchers</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Product managers and founders</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Students and early-career builders</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Collaborators across chains & models</li>
+            </ul>
+          </div>
+
+          {/* Right column: audience preview cards */}
+          <div>
+            <div className="mt-0 grid grid-cols-1 gap-4">
+              {audiences.map((audience, index) => (
+                <motion.div key={index} whileHover={{ y: -4 }} className="rounded-xl border bg-card p-4 shadow-sm">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    {audience.icon}
+                    <span>{audience.title}</span>
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">{audience.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   )
 }
-
