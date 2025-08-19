@@ -84,10 +84,10 @@ export default function ProductsSection() {
           {/* Notes column */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground">
-              <NotebookPen className="h-3.5 w-3.5" /> Store Notes
+              <NotebookPen className="h-3.5 w-3.5" /> Notes (Product)
             </div>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Structure your vibes...</h2>
-            <p className="mt-2 text-muted-foreground">Capture links, code, ideas, todos, events, and reminders. Organize with Notes and Bookmarks. Create once, reuse everywhere.</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Notes — structure your vibes.</h2>
+            <p className="mt-2 text-muted-foreground">Our Notes product for capturing links, code, ideas, todos, events, and reminders. Organize everything into notebooks and reuse across your workflow.</p>
             <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
               {notesFeatures.map((feature) => (
                 <li key={feature.title} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> {feature.title}</li>
@@ -123,10 +123,10 @@ export default function ProductsSection() {
           {/* Bookmarks Column */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground">
-              <Bookmark className="h-3.5 w-3.5" /> Save Bookmarks
+              <Bookmark className="h-3.5 w-3.5" /> Bookmarks (Product)
             </div>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">The fastest way to save the web.</h2>
-            <p className="mt-2 text-muted-foreground">One shortcut to capture links, generate previews, and tag content. Powerful search makes everything instantly findable.</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">Bookmarks — save with intelligence.</h2>
+            <p className="mt-2 text-muted-foreground">Our Bookmarks product for capturing links, generating previews, tagging content, and searching instantly across your saved knowledge.</p>
             <ul className="mt-4 space-y-2 text-sm grid grid-cols-2 gap-1 sm:gap-2">
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Smart metadata extraction</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Organize with tags and collections</li>

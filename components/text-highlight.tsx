@@ -52,8 +52,8 @@ function HighlightText({
         display: "inline",
       }}
       className={cn(
-        `relative inline-block px-2 py-1 rounded-md bg-gradient-to-r from-pink-100 to-pink-100 dark:from-pink-500 dark:to-pink-500`,
-        className
+        `relative inline-block px-2 py-1 rounded-md bg-gradient-to-r from-pink-300 to-pink-300 dark:from-pink-500 dark:to-pink-500`, 
+        className,
       )}
       {...props}
     >

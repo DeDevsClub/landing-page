@@ -15,26 +15,19 @@ export function Footer() {
   ]
   return (
     <footer className="w-full border-t">
-      <div className="flex flex-col justify-between mx-auto max-w-screen-2xl px-4 sm:px-6 py-10">
-        <div className="grid grid-cols-1 gap-10 items-start">
+      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-10">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 w-full">
           {/* Left: brand + badge + blurb */}
-          <div className="flex flex-col items-start">
-            {/* <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground">
-              <span className="inline-flex items-center gap-2">
-                <Image src="/logo.png" alt="DeDevs Logo" width={16} height={16} className="rounded-sm" />
-                DeDevs
-              </span>
-            </div> */}
-            <Link href="/" className="mt-3 flex items-center gap-2">
-              <Image src="/logo.png" alt="DeDevs Logo" width={28} height={28} />
-              <span className="text-xl font-semibold tracking-tight">DeDevs</span>
+          <div className="flex flex-cols h-full justify-start w-full items-center text-center sm:text-left">
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/logo.png" alt="DeDevs Logo" width={24} height={24} />
+              <span className="text-base font-semibold tracking-tight ml-2">DeDevs Club</span>
             </Link>
-            <p className="mt-2 text-sm text-muted-foreground">Build at the intersection of blockchain and AI. Join our community to learn, collaborate, and ship.</p>
           </div>
 
-          {/* Right: link cards */}
-          <nav aria-label="Footer links" className="flex flex-cols justify-end gap-2">
-            <div className="flex flex-cols justify-end gap-2">
+          {/* Right: social icons row */}
+          <nav aria-label="Footer links" className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
               {socialLinks.map((link) => (
                 <Link
                   key={link.href}

@@ -4,20 +4,21 @@ import SplitText from "@/components/ui/split-text";
 import { WaitlistForm } from "@/components/waitlist-form";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { HighlightText } from "./text-highlight";
 
 export default function Waitlist() {
   return (
     <div className="flex flex-col h-screen justify-center items-center text-center">
-      <div className="mb-8">
+      <div className="mb-6">
         <SplitText className="text-5xl tracking-tighter font-medium">
-          Join the Future of Decentralized Artificial Intelligence
+          Join our Community of Builders
         </SplitText>
-        <SplitText className="tracking-tight text-xl">
-          Access exclusive, AI and blockchain curated content, news, and insights for early adopters and visionaries.
-        </SplitText>
+        <div className="tracking-tight text-xl mt-2 px-4 py-2 text-text dark:text-text font-medium rounded-md italic">
+          <HighlightText text="Where builders and early adopters learn, collaborate, and ship together." />
+        </div>
       </div>
       <WaitlistForm />
-      <div className="mt-4">
+      <div className="mt-6">
         <Counter />
       </div>
       <footer className="sticky top-[100vh]">

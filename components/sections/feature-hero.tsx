@@ -202,9 +202,6 @@ export default function FeatureHero() {
                 ))}
               </div>
           </div>
-            {/* Decorative gradient elements */}
-            {/* <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" />
-        <div className="absolute -bottom-48 -right-48 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000" /> */}
         </section>
 
     );
