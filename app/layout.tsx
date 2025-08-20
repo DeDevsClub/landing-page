@@ -5,6 +5,7 @@ import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { URLS } from "@/constants/urls"
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -84,6 +85,7 @@ export default function RootLayout({
       <body className={`bg-background ${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

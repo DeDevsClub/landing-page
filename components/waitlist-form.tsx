@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { toast } from "sonner";
 import * as motion from "motion/react-client";
 
 import { Button } from "@/components/ui/button";
@@ -15,17 +14,18 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { Loader2 } from "lucide-react";
+import { Loader2, CheckCircle2, XCircle } from "lucide-react";
 import { Icon } from "@iconify/react"
+import { useToast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   name: z
     .string()
-    .min(1, "Name is required.")
+    .min(1, "Name Required.")
     .max(100, "Name must be less than 100 characters."),
   email: z
     .string()
-    .min(1, "Email address is required.")
+    .min(1, "Email Required.")
     .email("Please enter a valid email address."),
 });
 
@@ -33,6 +33,8 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function WaitlistForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const { toast } = useToast();
 
   const form = useForm<FormValues>({
     defaultValues: {
@@ -43,6 +45,7 @@ export function WaitlistForm() {
 
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true);
+    setSubmitStatus("idle");
     form.clearErrors(); // clear errors
 
     const validationResult = formSchema.safeParse(data);
@@ -91,19 +94,28 @@ export function WaitlistForm() {
         );
       }
 
-      toast.success(
-        (responseBody as { message?: string })?.message ||
-        "Successfully joined the waitlist!"
-      );
+      toast({
+        title: "You're in!",
+        description:
+          (responseBody as { message?: string })?.message ||
+          "Successfully joined the waitlist.",
+      });
+      setSubmitStatus("success");
       form.reset();
     } catch (error) {
-      toast.error(
-        error instanceof Error
-          ? error.message
-          : "An unexpected error occurred. Please try again."
-      );
+      toast({
+        title: "Something went wrong",
+        description:
+          error instanceof Error
+            ? error.message
+            : "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
+      // Revert button state after a short delay for UX feedback
+      setTimeout(() => setSubmitStatus("idle"), 2000);
     }
   }
 
@@ -161,19 +173,34 @@ export function WaitlistForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="h-11 shrink-0 rounded-md px-6 font-medium"
+          className={
+            "h-11 shrink-0 rounded-md px-6 font-medium transition-colors " +
+            (submitStatus === "success"
+              ? "bg-green-600 text-white hover:bg-green-600"
+              : submitStatus === "error"
+              ? "bg-red-600 text-white hover:bg-red-600"
+              : "")
+          }
           aria-live="polite"
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="animate-spin" />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Entering...
             </>
+          ) : submitStatus === "success" ? (
+            <div className="flex items-center">
+              <CheckCircle2 className="mr-2 h-4 w-4" />
+              Joined!
+            </div>
+          ) : submitStatus === "error" ? (
+            <div className="flex items-center">
+              <XCircle className="mr-2 h-4 w-4" />
+              Try again
+            </div>
           ) : (
             <div className="flex items-center">
-              <Icon
-                icon="tabler:code"
-                className="mr-2 h-4 w-4" />
+              <Icon icon="tabler:code" className="mr-2 h-4 w-4" />
               Join the Club
             </div>
           )}

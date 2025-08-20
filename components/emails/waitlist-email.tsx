@@ -17,10 +17,10 @@ interface WaitlistConfirmationEmailProps {
   email: string;
 }
 
-const logoUrl = "https://dedevs.club/logo.png";
+const logoUrl = "https://dedevs.com/logo.png";
 
 export const WaitlistConfirmationEmail = ({ email }: WaitlistConfirmationEmailProps) => {
-  const previewText = `Welcome to the DeDevs Club Waitlist!`;
+  const previewText = `Welcome to the DeDevs Community!`;
 
   return (
     <Html>
@@ -34,22 +34,22 @@ export const WaitlistConfirmationEmail = ({ email }: WaitlistConfirmationEmailPr
                 src={logoUrl}
                 width="40"
                 height="37"
-                alt="DeDevs Club"
+                alt="DeDevs Community"
                 className="my-0 mx-auto"
               />
             </Section>
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
-              Welcome to the <strong>DeDevs Club</strong> Waitlist!
+              Welcome to the <strong>DeDevs Community</strong>!
             </Heading>
             <Text className="text-black text-[14px] leading-[24px]">
               Hi there,
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
-              Thanks for joining the waitlist for <strong>DeDevs Club</strong>. We're excited to have you!
+              Thanks for joining the <strong>DeDevs Community</strong>. We're excited to have you!
               
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
-              Your email ({email}) has been successfully added. We'll reach out as soon as we have updates or are ready to launch.
+              Your email ({email}) has been successfully added. We'll reach out as soon as we have updates, new features, or upcoming events.
             </Text>
             <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
             <Text className="text-[#666666] text-[12px] leading-[24px]">
