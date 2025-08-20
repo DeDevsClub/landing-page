@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
         console.warn("RESEND_API_KEY not set; skipping confirmation email.");
       } else {
         await resend.emails.send({
-          from: process.env.MAIL_FROM || "DeDevs Community <no-reply@dedevs.com>",
+          from: process.env.EMAIL_FROM || "DeDevs <no-reply@dedevs.com>",
           to: email,
           subject: "Welcome to the DeDevs Community",
           react: WaitlistConfirmationEmail({ email }),
