@@ -272,7 +272,8 @@ export function RoadmapSection() {
   }
 
   return (
-    <section id="roadmap" className="w-full relative">
+    // biome-ignore lint/nursery/useUniqueElementIds: <explanation>
+<section id="roadmap" className="w-full relative">
       <SectionBackground variant="roadmap" />
       <SectionHeader title="DeDevs Roadmap" content={"Follow our journey and see what\'s coming next for the DeDevs community."} />
       <div className="container px-4 md:px-6 relative z-10">

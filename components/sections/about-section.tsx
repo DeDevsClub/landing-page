@@ -29,6 +29,7 @@ function CountUp({ to, duration = 1200, suffix = "" }: { to: number; duration?: 
 
 export function AboutSection() {
   return (
+    // biome-ignore lint/nursery/useUniqueElementIds: okay for now
     <section id="about" className="w-full relative overflow-hidden">
       {/* Replace the old background with our new component */}
       <SectionBackground variant="about" className="bg-background" />

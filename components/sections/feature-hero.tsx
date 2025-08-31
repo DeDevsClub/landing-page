@@ -13,8 +13,8 @@ import { quickLinks } from "@/constants/urls";
 
 export default function FeatureHero() {
     // Feature dot styling
-    const featureDot =
-        "inline-flex h-2 w-2 rounded-full bg-pink-500 mr-2 self-center mt-0.5";
+    // const featureDot =
+    //     "inline-flex h-2 w-2 rounded-full bg-pink-500 mr-2 self-center mt-0.5";
 
     // Demo animation states
     const [_activeTab, setActiveTab] = useState(1); // 0: Content Writer, 1: Code Assistant, etc.
@@ -58,6 +58,7 @@ export default function FeatureHero() {
         }
     }, [responseIndex]);
     return (
+        // biome-ignore lint/nursery/useUniqueElementIds: okay for now
         <section
             id="hero"
             className="grid grid-cols-1 w-full py-2 items-center justify-center overflow-hidden min-h-[90vh] lg:h-dvh max-w-screen-5xl mx-auto px-2 sm:px-6 relative z-10 bg-background"

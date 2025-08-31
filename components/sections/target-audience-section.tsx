@@ -26,6 +26,7 @@ export function TargetAudienceSection() {
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
+          <title>Product Managers</title>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -47,6 +48,7 @@ export function TargetAudienceSection() {
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
+          <title>Students & Beginners</title>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -62,7 +64,8 @@ export function TargetAudienceSection() {
   ]
 
   return (
-    <section id="community" className="w-full">
+    // biome-ignore lint/nursery/useUniqueElementIds: okay for now
+<section id="community" className="w-full">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 gap-10 items-start">
           {/* Left column: header + description + checklist */}
@@ -83,8 +86,8 @@ export function TargetAudienceSection() {
           {/* Right column: audience preview cards */}
           <div>
             <div className="mt-0 grid grid-cols-1 gap-4">
-              {audiences.map((audience, index) => (
-                <motion.div key={index} whileHover={{ y: -4 }} className="rounded-xl border bg-card p-4 shadow-sm">
+              {audiences.map((audience) => (
+                <motion.div key={audience.title} whileHover={{ y: -4 }} className="rounded-xl border bg-card p-4 shadow-sm">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     {audience.icon}
                     <span>{audience.title}</span>

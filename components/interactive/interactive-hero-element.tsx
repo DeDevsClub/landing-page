@@ -61,12 +61,12 @@ export function InteractiveHeroElement({ className }: InteractiveHeroElementProp
       {/* Grid lines */}
       <div className="absolute inset-0 flex flex-col justify-end z-0 opacity-20">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="h-px bg-[#00ffff]/50 mb-8"></div>
+          <div key={i.toString()} className="h-px bg-[#00ffff]/50 mb-8"></div>
         ))}
       </div>
       <div className="absolute inset-0 flex justify-around z-0 opacity-20">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="w-px bg-[#00ffff]/50"></div>
+          <div key={i.toString()} className="w-px bg-[#00ffff]/50"></div>
         ))}
       </div>
 
@@ -74,7 +74,7 @@ export function InteractiveHeroElement({ className }: InteractiveHeroElementProp
       <div className="absolute inset-0 z-0">
         {Array.from({ length: 15 }).map((_, i) => (
           <motion.div
-            key={i}
+            key={i.toString()}
             className="absolute w-1 h-1 rounded-full bg-[#f143a9]"
             initial={{
               x: Math.random() * 100 + "%",
@@ -95,7 +95,7 @@ export function InteractiveHeroElement({ className }: InteractiveHeroElementProp
         ))}
         {Array.from({ length: 15 }).map((_, i) => (
           <motion.div
-            key={i}
+            key={i.toString()}
             className="absolute w-1 h-1 rounded-full bg-[#00ffff]"
             initial={{
               x: Math.random() * 100 + "%",

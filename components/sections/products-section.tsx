@@ -77,8 +77,9 @@ const notesPreviewCards = [
 ];
 
 export default function ProductsSection() {
-return (
- <section id="products" className="w-full max-w-screen-2xl">
+  return (
+    // biome-ignore lint/nursery/useUniqueElementIds: okay for now
+    <section id="products" className="w-full max-w-screen-2xl">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 py-12">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Notes column */}
@@ -96,18 +97,18 @@ return (
             <div className="flex flex-cols gap-1 justify-center mt-5 w-full">
               <Link href="https://vibes.guide/notebooks"
                 className="flex flex-col w-full"
-target="_to"
-rel="noopener noreferrer"
->
+                target="_to"
+                rel="noopener noreferrer"
+              >
                 <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><NotebookPen className="mr-2 h-4 w-4" />Notes</Button></Link>
-                <Link href="https://vibes.guide/tasks"
+              <Link href="https://vibes.guide/tasks"
                 className="flex flex-col w-full"
-target="_to"
-rel="noopener noreferrer">
+                target="_to"
+                rel="noopener noreferrer">
                 <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><SquareCheck className="mr-2 h-4 w-4" />Tasks</Button></Link>
-                <Link href="https://vibes.guide/reminders"
-target="_to"
-rel="noopener noreferrer"
+              <Link href="https://vibes.guide/reminders"
+                target="_to"
+                rel="noopener noreferrer"
                 className="flex flex-col w-full">
                 <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><CalendarDays className="mr-2 h-4 w-4" />Reminders</Button></Link>
             </div>
@@ -115,7 +116,9 @@ rel="noopener noreferrer"
             {/* Mini interactive preview cards */}
             <div className="mt-8 grid sm:grid-cols-2 gap-4">
               {notesPreviewCards.map((card) => (
-                <motion.div whileHover={{ y: -4 }}
+                <motion.div
+                  key={card.title}
+                  whileHover={{ y: -4 }}
                   className="rounded-xl border bg-card p-4 shadow-sm">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">{card.icon} {card.title}</div>
                   <p className="mt-2 text-sm font-medium">{card.description}</p>
@@ -142,9 +145,9 @@ rel="noopener noreferrer"
             </ul>
             <div className="flex justify-center mt-5">
               <Link href="https://vibes.guide/bookmarks" className="flex flex-col w-full"
-target="_to"
-rel="noopener noreferrer"
->
+                target="_to"
+                rel="noopener noreferrer"
+              >
                 <Button variant="default" size="lg" className="bg-background text-text dark:bg-background dark:text-foreground hover:bg-pink-500 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white border-2 border-pink-300 dark:border-pink-500 rounded-md"><Bookmark className="mr-2 h-4 w-4" />Explore Bookmarks</Button></Link>
               {/* <Link href="/bookmarks"><Button variant="outline" size="lg">Import from browser</Button></Link> */}
             </div>
@@ -158,14 +161,18 @@ rel="noopener noreferrer"
                   <p className="text-xs text-muted-foreground">{bookmark.description}</p>
 
                   <div className="flex flex-cols justify-end items-center gap-1 rounded-md text-[10px] text-muted-foreground">
-                    <span
+                    <button
+                      type="button"
                       className="flex flex-cols border justify-end items-center gap-1 rounded-full px-2 py-0.5 text-[10px] text-muted-foreground"
                       onClick={() => window.open(bookmark.url, "_blank")}
-                    ><Bookmark className="h-3 w-3" /> Save</span>
-                    <span
+                      onKeyUp={() => window.open(bookmark.url, "_blank")}
+                    ><Bookmark className="h-3 w-3" /> Save</button>
+                    <button
+                      type="button"
                       className="flex flex-cols border justify-end items-center gap-1 rounded-full px-2 py-0.5 z-10 text-[10px] text-muted-foreground"
                       onClick={() => window.open(bookmark.url, "_blank")}
-                    ><Link2 className="h-3 w-3" /> Open</span>
+                      onKeyUp={() => window.open(bookmark.url, "_blank")}
+                    ><Link2 className="h-3 w-3" /> Open</button>
                   </div>
 
                 </motion.div>

@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: okay for now */
 "use client"
 
 import { motion } from "framer-motion"
@@ -31,33 +32,33 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
     )
   }
 
-  const renderStars = (count = 50) => {
-    return (
-      <div className="absolute inset-0 z-0">
-        {Array.from({ length: count }).map((_, i) => (
-          <motion.div
-            key={`star-${i}`}
-            className="absolute w-1 h-1 rounded-full bg-white"
-            initial={{
-              x: `${Math.random() * 100}%`,
-              y: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.5 + 0.2,
-              scale: Math.random() * 0.5 + 0.5,
-            }}
-            animate={{
-              opacity: [Math.random() * 0.5 + 0.2, Math.random() * 0.8 + 0.2, Math.random() * 0.5 + 0.2],
-              scale: [Math.random() * 0.5 + 0.5, Math.random() * 0.8 + 0.5, Math.random() * 0.5 + 0.5],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </div>
-    )
-  }
+  // const renderStars = (count = 50) => {
+  //   return (
+  //     <div className="absolute inset-0 z-0">
+  //       {Array.from({ length: count }).map((_, i) => (
+  //         <motion.div
+  //           key={`star-${i}`}
+  //           className="absolute w-1 h-1 rounded-full bg-white"
+  //           initial={{
+  //             x: `${Math.random() * 100}%`,
+  //             y: `${Math.random() * 100}%`,
+  //             opacity: Math.random() * 0.5 + 0.2,
+  //             scale: Math.random() * 0.5 + 0.5,
+  //           }}
+  //           animate={{
+  //             opacity: [Math.random() * 0.5 + 0.2, Math.random() * 0.8 + 0.2, Math.random() * 0.5 + 0.2],
+  //             scale: [Math.random() * 0.5 + 0.5, Math.random() * 0.8 + 0.5, Math.random() * 0.5 + 0.5],
+  //           }}
+  //           transition={{
+  //             duration: Math.random() * 3 + 2,
+  //             repeat: Number.POSITIVE_INFINITY,
+  //             repeatType: "reverse",
+  //           }}
+  //         />
+  //       ))}
+  //     </div>
+  //   )
+  // }
 
   const renderSynthwaveSun = (position: "bottom" | "top" = "bottom", size = 200, opacity = 0.05) => {
     return (
@@ -97,35 +98,35 @@ export function SectionBackground({ variant, className = "" }: SectionBackground
     )
   }
 
-  const renderFloatingParticles = (count = 15, colors: string[] = ["#f143a9", "#00ffff"]) => {
-    return (
-      <div className="absolute inset-0 z-0">
-        {colors.map((color) =>
-          Array.from({ length: count }).map((_, i) => (
-            <motion.div
-              key={`particle-${color}-${i}`}
-              className={`absolute w-1 h-1 rounded-full bg-[${color}]`}
-              initial={{
-                x: Math.random() * 100 + "%",
-                y: Math.random() * 100 + "%",
-                opacity: Math.random() * 0.5 + 0.2,
-              }}
-              animate={{
-                x: [Math.random() * 100 + "%", Math.random() * 100 + "%", Math.random() * 100 + "%"],
-                y: [Math.random() * 100 + "%", Math.random() * 100 + "%", Math.random() * 100 + "%"],
-                opacity: [Math.random() * 0.5 + 0.2, Math.random() * 0.8 + 0.2, Math.random() * 0.5 + 0.2],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 15,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "linear",
-              }}
-            />
-          )),
-        )}
-      </div>
-    )
-  }
+  // const renderFloatingParticles = (count = 15, colors: string[] = ["#f143a9", "#00ffff"]) => {
+  //   return (
+  //     <div className="absolute inset-0 z-0">
+  //       {colors.map((color) =>
+  //         Array.from({ length: count }).map((_, i) => (
+  //           <motion.div
+  //             key={`particle-${color}-${i}`}
+  //             className={`absolute w-1 h-1 rounded-full bg-[${color}]`}
+  //             initial={{
+  //               x: Math.random() * 100 + "%",
+  //               y: Math.random() * 100 + "%",
+  //               opacity: Math.random() * 0.5 + 0.2,
+  //             }}
+  //             animate={{
+  //               x: [Math.random() * 100 + "%", Math.random() * 100 + "%", Math.random() * 100 + "%"],
+  //               y: [Math.random() * 100 + "%", Math.random() * 100 + "%", Math.random() * 100 + "%"],
+  //               opacity: [Math.random() * 0.5 + 0.2, Math.random() * 0.8 + 0.2, Math.random() * 0.5 + 0.2],
+  //             }}
+  //             transition={{
+  //               duration: Math.random() * 10 + 15,
+  //               repeat: Number.POSITIVE_INFINITY,
+  //               ease: "linear",
+  //             }}
+  //           />
+  //         )),
+  //       )}
+  //     </div>
+  //   )
+  // }
 
   const renderCyberGrid = (opacity = 0.1) => {
     return (

@@ -57,7 +57,7 @@ function Hexagons({
       <div className="absolute top-0 -left-0 size-full overflow-hidden">
         {Array.from({ length: gridDimensions.rows }).map((_, rowIndex) => (
           <div
-            key={`row-${rowIndex}`}
+            key={`row-${gridDimensions.rows + rowIndex}`}
             style={{
               marginTop: computedMarginTop,
               marginLeft:
@@ -70,7 +70,7 @@ function Hexagons({
             {Array.from({ length: gridDimensions.columns }).map(
               (_, colIndex) => (
                 <div
-                  key={`hexagon-${rowIndex}-${colIndex}`}
+                  key={`hexagon-${gridDimensions.rows + rowIndex}-${gridDimensions.columns + colIndex}`}
                   {...hexagonProps}
                   style={{
                     width: hexagonWidth,

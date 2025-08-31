@@ -112,9 +112,9 @@ export default function LandingHeader() {
             <div className="flex items-center">
               <NavigationMenu className="relative z-[100]">
                 <NavigationMenuList>
-                  {TopMenu.map((menu, idx) =>
+                  {TopMenu.map((menu) =>
                     menu.Dropdown ? (
-                      <NavigationMenuItem key={idx}>
+                      <NavigationMenuItem key={menu.name}>
                         <NavigationMenuTrigger className="font-semibold lg:text-md text-sm bg-transparent text-text hover:bg-pink-300 hover:text-pink-50 transition-all duration-500">
                           {menu.name}
                         </NavigationMenuTrigger>
@@ -150,9 +150,9 @@ export default function LandingHeader() {
                                   </Link>
                                 </NavigationMenuLink>
                               </li>
-                              {menu.Dropdown.map((item, idx) => (
+                              {menu.Dropdown.map((item) => (
                                 <ListItem
-                                  key={idx}
+                                  key={item.title}
                                   href={item.href}
                                   title={item.title}
                                 >
@@ -162,8 +162,8 @@ export default function LandingHeader() {
                             </ul>
                           ) : (
                             <ul className="w-80 p-3">
-                              {menu.Dropdown.map((item, index) => (
-                                <li key={index} className="group">
+                              {menu.Dropdown.map((item) => (
+                                <li key={item.title} className="group">
                                   <NavigationMenuLink asChild>
                                     <Link
                                       className={cn(
@@ -191,7 +191,7 @@ export default function LandingHeader() {
                         </NavigationMenuContent>
                       </NavigationMenuItem>
                     ) : (
-                      <NavigationMenuItem key={idx}>
+                      <NavigationMenuItem key={menu.name}>
                         <Link
                           className={cn(
                             // navigationMenuTriggerStyle(),
@@ -259,10 +259,10 @@ export default function LandingHeader() {
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col">
-                  {TopMenu.map((menu, idx) =>
+                  {TopMenu.map((menu) =>
                     menu.Dropdown ? (
                       <Accordion
-                        key={idx}
+                        key={menu.name}
                         type="single"
                         collapsible
                         className="w-full mb-1"
@@ -276,9 +276,9 @@ export default function LandingHeader() {
                           </AccordionTrigger>
                           <AccordionContent className="pt-2 pb-3">
                             <div className="flex flex-col space-y-3">
-                              {menu.Dropdown.map((item, index) => (
+                              {menu.Dropdown.map((item) => (
                                 <Link
-                                  key={index}
+                                  key={item.title}
                                   className={cn(
                                     "flex items-center gap-3 rounded-md p-2 transition-colors hover:bg-accent hover:text-accent-foreground"
                                   )}
@@ -303,7 +303,7 @@ export default function LandingHeader() {
                       </Accordion>
                     ) : (
                       <Link
-                        key={idx}
+                        key={menu.name}
                         href={menu.href}
                         className={`py-3 px-1 font-medium text-base border-b border-border/40 flex items-center hover:text-pink-500`}
                       >
