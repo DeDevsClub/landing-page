@@ -17,7 +17,7 @@ const bookmarks = [
   {
     title: "DeDevs Club",
     description: "Join our community on Skool.",
-    url: "https://skool.com/devs"
+    url: "https://skool.com/dedevs-2303"
   },
   {
     title: "@DeDevsClub",

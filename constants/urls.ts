@@ -5,7 +5,7 @@ export const URLS = {
   BLOG: "https://blog.dedevs.club",
   DOCS: "https://docs.dedevs.com",
   TWITTER: "https://x.com/dedevsclub",
-  CLUB: "https://skool.com/devs",
+  CLUB: "https://skool.com/dedevs-2303",
 }; 
 
 export const quickLinks = [

@@ -127,7 +127,7 @@ export default function LandingHeader() {
                                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md
                                     bg-pink-300 hover:bg-pink-500 hover:text-pink-50 transition-all duration-500
                                     "
-                                    href="https://skool.com/devs"
+                                    href="https://skool.com/dedevs-2303"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                   >
