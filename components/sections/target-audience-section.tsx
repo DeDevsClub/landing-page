@@ -6,13 +6,13 @@ import { Code, Brain, CheckCircle2 } from "lucide-react"
 export function TargetAudienceSection() {
   const audiences = [
     {
-      icon: <Code className="h-10 w-10 text-[#f143a9]" />,
+      icon: <Code className="h-10 w-10 text-[#F6339A]" />,
       title: "Blockchain Developers",
       description:
         "Whether you're building on Ethereum, Solana, or other chains, connect with peers to solve complex problems and explore new protocols.",
     },
     {
-      icon: <Brain className="h-10 w-10 text-[#00ffff]" />,
+      icon: <Brain className="h-10 w-10 text-[#4FC5F7]" />,
       title: "AI Researchers",
       description:
         "Share your latest findings, discuss cutting-edge papers, and collaborate on projects pushing the boundaries of machine learning.",
@@ -20,7 +20,7 @@ export function TargetAudienceSection() {
     {
       icon: (
         <svg
-          className="h-10 w-10 text-[#f143a9]"
+          className="h-10 w-10 text-[#F6339A]"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ export function TargetAudienceSection() {
     {
       icon: (
         <svg
-          className="h-10 w-10 text-[#00ffff]"
+          className="h-10 w-10 text-[#4FC5F7]"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
